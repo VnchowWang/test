@@ -35,8 +35,11 @@ http://127.0.0.1:18888/clash.yaml
 | 版本 | 链接 | provider 源 | 拉取间隔 | 适用 |
 | --- | --- | --- | --- | --- |
 | **本机版** | `http://127.0.0.1:18888/clash.yaml` | 本机 watcher | **10 秒** | 就在这台电脑上用（FlClash/Clash Verge） |
-| **远端版** | `proxy-sub/clash-live-provider.yaml` | GitHub raw | 300 秒 | 另一台电脑/外网 |
-| **手机版** | `http://127.0.0.1:18888/clash.yaml`（经 adb reverse） | 本机 watcher | **10 秒** | Android 手机（adb 连着这台电脑时） |
+| **远端版** | `https://raw.githubusercontent.com/VnchowWang/test/main/proxy-sub/clash-live-provider.yaml` | GitHub raw | 300 秒 | 另一台电脑 / 外网 / **手机拔线后** |
+| **手机版（连着电脑）** | `http://127.0.0.1:18888/clash.yaml`（经 adb reverse） | 本机 watcher | **10 秒** | Android 手机（adb 连着这台电脑时） |
+
+远端版和本机版是**两份不同的文件**：本机版 provider 指向 `127.0.0.1:18888` + `interval: 10`，
+远端版 provider 指向 raw + `interval: 300`。别把远端链接填给本机，也别把本机链接发给别人。
 
 远端版受 raw CDN `max-age=300` 限制，写 10 秒也没意义（每次拉到的是同一份缓存）。
 **三个文件由同一个 watcher 生成，节点内容一致。**
@@ -144,6 +147,29 @@ FlClash 的订阅自动更新被**硬编码为 20 分钟**
 
 > 前提：本机 watcher 进程在跑（见下方「本机运维」）。不在跑时本机源会连不上，
 > 此时退回 GitHub 静态链接，但刷新会退回 5 分钟 / 20 分钟级别。
+
+### 📵 手机不在家 / 拔了数据线，用这条
+
+```
+https://raw.githubusercontent.com/VnchowWang/test/main/proxy-sub/clash-live-provider.yaml
+```
+
+`adb reverse` 只在 USB/无线调试连着时存在，线一拔手机的 `127.0.0.1:18888` 就是空的
+（实测 `device '172.16.46.43:5555' not found`）。所以手机外出必须用远端版：
+
+- 节点列表：每 **300 秒**从 raw 重拉（CDN 上限，改不了）
+- 节点健康检查：仍然 **10 秒**、`lazy: false`、`max-failed-times: 3`
+- 粘性语义完全一样：`⭐ 智能选择` 是 `fallback`，只在当前节点真挂了才顺延
+- 站点分流组（AI / Netflix / 动画疯 / Google Play）完全一样
+
+一键导入（手机浏览器点开即可唤起 FlClash）：
+
+```
+flclash://install-config?url=https%3A%2F%2Fraw.githubusercontent.com%2FVnchowWang%2Ftest%2Fmain%2Fproxy-sub%2Fclash-live-provider.yaml
+```
+
+远端版已实测：内核独立从 raw 拉到 40 节点、13 组全部有成员、真实拨号 `204 / 0.15s`、
+出口 `HK`、`api.openai.com` 通。
 
 ---
 
