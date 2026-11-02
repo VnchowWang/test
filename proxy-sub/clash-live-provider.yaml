@@ -35,7 +35,7 @@ dns:
 proxy-providers:
   live:
     type: http
-    url: https://raw.githubusercontent.com/VnchowWang/test/main/proxy-sub/live-provider.yaml
+    url: https://gh-proxy.com/https://raw.githubusercontent.com/VnchowWang/test/main/proxy-sub/live-provider.yaml
     interval: 30
     path: ./live-provider.yaml
     exclude-filter: (?i)过期|剩余|流量|官网|到期|重置|套餐|群组|Expire|Traffic
