@@ -1,0 +1,256 @@
+mixed-port: 7890
+external-controller: 127.0.0.1:9090
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: 'off'
+geodata-mode: false
+geo-auto-update: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - 223.5.5.5
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+proxy-providers:
+  live:
+    type: http
+    url: https://raw.githubusercontent.com/VnchowWang/test/main/proxy-sub/live-provider.yaml
+    interval: 30
+    path: ./live-provider.yaml
+    exclude-filter: (?i)过期|剩余|流量|官网|到期|重置|套餐|群组|Expire|Traffic
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 10
+      lazy: false
+proxy-groups:
+  - name: ⭐ 优选集
+    type: url-test
+    use:
+      - live
+    url: http://www.gstatic.com/generate_204
+    interval: 10
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🚀 主出口
+    type: fallback
+    proxies:
+      - ⭐ 优选集
+    use:
+      - live
+    url: http://www.gstatic.com/generate_204
+    interval: 10
+    lazy: false
+    max-failed-times: 3
+  - name: 🔀 手动
+    type: select
+    proxies:
+      - 🚀 主出口
+      - ⭐ 优选集
+    use:
+      - live
+  - name: 🇭🇰 香港
+    type: url-test
+    use:
+      - live
+    filter: 🇭🇰
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇹🇼 台湾
+    type: url-test
+    use:
+      - live
+    filter: 🇹🇼
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇯🇵 日本
+    type: url-test
+    use:
+      - live
+    filter: 🇯🇵
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇸🇬 新加坡
+    type: url-test
+    use:
+      - live
+    filter: 🇸🇬
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇺🇸 美国
+    type: url-test
+    use:
+      - live
+    filter: 🇺🇸
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇰🇷 韩国
+    type: url-test
+    use:
+      - live
+    filter: 🇰🇷
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇬🇧 英国
+    type: url-test
+    use:
+      - live
+    filter: 🇬🇧
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇩🇪 德国
+    type: url-test
+    use:
+      - live
+    filter: 🇩🇪
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇳🇱 荷兰
+    type: url-test
+    use:
+      - live
+    filter: 🇳🇱
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇫🇷 法国
+    type: url-test
+    use:
+      - live
+    filter: 🇫🇷
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇹🇷 土耳其
+    type: url-test
+    use:
+      - live
+    filter: 🇹🇷
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇹🇭 泰国
+    type: url-test
+    use:
+      - live
+    filter: 🇹🇭
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇮🇳 印度
+    type: url-test
+    use:
+      - live
+    filter: 🇮🇳
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇦🇺 澳大利亚
+    type: url-test
+    use:
+      - live
+    filter: 🇦🇺
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇨🇦 加拿大
+    type: url-test
+    use:
+      - live
+    filter: 🇨🇦
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🇷🇺 俄罗斯
+    type: url-test
+    use:
+      - live
+    filter: 🇷🇺
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    tolerance: 0
+    max-failed-times: 2
+  - name: 🎯 直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 主出口
+  - name: 🛑 拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+rules:
+  - DOMAIN-SUFFIX,githubusercontent.com,🎯 直连
+  - DOMAIN-SUFFIX,github.com,🎯 直连
+  - DOMAIN-SUFFIX,jsdelivr.net,🎯 直连
+  - DOMAIN-SUFFIX,ghproxy.net,🎯 直连
+  - DOMAIN-SUFFIX,gh-proxy.com,🎯 直连
+  - DOMAIN-SUFFIX,local,🎯 直连
+  - IP-CIDR,127.0.0.0/8,🎯 直连,no-resolve
+  - IP-CIDR,192.168.0.0/16,🎯 直连,no-resolve
+  - IP-CIDR,10.0.0.0/8,🎯 直连,no-resolve
+  - IP-CIDR,172.16.0.0/12,🎯 直连,no-resolve
+  - GEOIP,CN,🎯 直连
+  - MATCH,🚀 主出口
