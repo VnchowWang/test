@@ -99,51 +99,31 @@ proxy-groups:
     interval: 30
     lazy: false
     max-failed-times: 3
-  - name: 🇵🇭 菲律宾
-    type: fallback
-    use:
-      - live
-    filter: 🇵🇭|菲律宾|PH
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    max-failed-times: 3
   - name: 🤖 AI 服务
-    type: fallback
-    use:
-      - live
-    filter: 🇭🇰|香港|🇹🇼|台湾|臺灣|🇯🇵|日本|🇸🇬|新加坡|🇺🇸|美国|HK|TW|JP|SG|US
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    max-failed-times: 3
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
   - name: 🎬 Netflix
-    type: fallback
-    use:
-      - live
-    filter: 🇭🇰|香港|🇹🇼|台湾|臺灣|🇯🇵|日本|🇸🇬|新加坡|HK|TW|JP|SG
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    max-failed-times: 3
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
   - name: 📺 动画疯
-    type: fallback
-    use:
-      - live
-    filter: 🇹🇼|台湾|臺灣|TW|tw_
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    max-failed-times: 3
+    type: select
+    proxies:
+      - 🇹🇼 台湾
   - name: 🛒 Google Play
-    type: fallback
-    use:
-      - live
-    filter: 🇭🇰|香港|🇹🇼|台湾|臺灣|🇯🇵|日本|🇸🇬|新加坡|🇺🇸|美国|HK|TW|JP|SG|US
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    max-failed-times: 3
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
   - name: 🔀 手动切换
     type: select
     use:
@@ -155,7 +135,6 @@ proxy-groups:
       - 🇹🇼 台湾
       - 🇯🇵 日本
       - 🇸🇬 新加坡
-      - 🇵🇭 菲律宾
       - 🤖 AI 服务
       - 🎬 Netflix
       - 📺 动画疯
@@ -200,6 +179,13 @@ rules:
   - DOMAIN-SUFFIX,googlevideo.com,🛒 Google Play
   - DOMAIN-SUFFIX,ytimg.com,🛒 Google Play
   - DOMAIN-SUFFIX,ggpht.com,🛒 Google Play
+  - DOMAIN-SUFFIX,gstatic.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,googleapis.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,googleusercontent.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,google.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,google.com.hk,⭐ 智能选择
+  - DOMAIN-SUFFIX,gvt1.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,gvt2.com,⭐ 智能选择
   - DOMAIN-SUFFIX,local,🎯 直连
   - IP-CIDR,127.0.0.0/8,🎯 直连,no-resolve
   - IP-CIDR,192.168.0.0/16,🎯 直连,no-resolve
