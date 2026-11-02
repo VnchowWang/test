@@ -2,7 +2,7 @@ mixed-port: 7890
 external-controller: 127.0.0.1:9090
 allow-lan: false
 mode: rule
-log-level: info
+log-level: warning
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
@@ -32,852 +32,164 @@ dns:
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-proxies:
-  - name: 🇭🇰 香港01 境外中转
-    server: a6.mhlnf.cn
-    port: 41391
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    __provider: CloudFisher
-  - name: 🇭🇰 hk_香港2
-    type: vless
-    server: fsjp13.46852.top
-    port: 50202
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: A66trH6Tl7iDXpgE6hxczEL_09LQTS85C1Imt3mt5EY
-      short-id: 34b149a1dc
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰 hk_香港5
-    type: vless
-    server: fsjp13.46852.top
-    port: 50208
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: zbwdDLc2MWbjHBwjpIN27aK7nU-aBCd24KKJzCIGQGQ
-      short-id: 59b117bf
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰 hk_香港6
-    type: vless
-    server: fsjp13.46852.top
-    port: 58546
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: nKbkP7Uzef2k4Uj5P7GqdsX7d7voTuCgdHYRAaFYnEM
-      short-id: 0bea3588c2
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰香港02
-    type: vless
-    server: 18.139.225.13
-    port: 50284
-    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: true
-    servername: www.tue.nl
-    reality-opts:
-      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
-      short-id: 35e0273c5d256abb
-    client-fingerprint: chrome
-    network: tcp
-    __provider: CloudFisher
-  - name: 🇸🇬 SG🍉新加坡3
-    type: vless
-    server: fsjp13.46852.top
-    port: 26065
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: LTgGWJtgO7THo1dbITvFbnttTcJM3_QRQfA4zZ63rWE
-      short-id: c4b62336f533
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇹🇭泰国
-    type: vless
-    server: 18.139.225.13
-    port: 28793
-    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: true
-    servername: www.tue.nl
-    reality-opts:
-      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
-      short-id: 35e0273c5d256abb
-    client-fingerprint: chrome
-    network: tcp
-    __provider: CloudFisher
-  - name: 🇹🇼 tw_台湾1
-    type: vless
-    server: fsjp13.46852.top
-    port: 11142
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: 9XTaxKbgRQv_Lm888cYOBeaJiwcN9L9ccR7cTjNk2h0
-      short-id: 288d726d07c6
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇹🇼 tw_台湾2
-    type: vless
-    server: fsjp13.46852.top
-    port: 11145
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: OaSFFR39o3IEBINQqrH4maTdQT5Zsnv7sQ6pCDO25Eo
-      short-id: 193e1478
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇹🇼 tw_台湾6
-    type: vless
-    server: fsjp13.46852.top
-    port: 11132
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: Q7RUYs0oqifpM7Nc2sfr2rUKVavHbxgPwB22wp8Nj3A
-      short-id: 0b
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 备用香港1
-    type: vless
-    server: unamecf3.xn--ghqu5fm27b67w.com
-    port: 443
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: null
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: sshk.1028cfym.shop
-    ech-opts:
+proxy-providers:
+  live:
+    type: http
+    url: http://127.0.0.1:18888/live-provider.yaml
+    interval: 10
+    path: ./live-provider.yaml
+    exclude-filter: (?i)过期|剩余|流量|官网|到期|重置|套餐|群组|防失联|失联|距离下次|Expire|Traffic|Website
+    health-check:
       enable: true
-    client-fingerprint: firefox
-    network: ws
-    ws-opts:
-      path: /cf/sshk1
-      headers:
-        Host: sshk.1028cfym.shop
-    __provider: shanshuiyun
-  - name: 🇭🇰 hk 香港_1
-    type: vless
-    server: fsjp13.46852.top
-    port: 24680
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: TSZLdc4KamaMPHir1_Gl_6Ommie5HisdSUsPhi983zA
-      short-id: '78'
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰 hk_香港1
-    type: vless
-    server: fsjp13.46852.top
-    port: 50201
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: AT6aAOPtIRay-e4tUrSRGvkJDO0HCBO2igk2t2f70HI
-      short-id: 8e69d79799c29308
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰 hk_香港3
-    type: vless
-    server: fsjp13.46852.top
-    port: 50205
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: 4_iO1h3Vd8CGOHdXsqenQLLHGzBxGMP3nodVKlwxNUY
-      short-id: d0
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇯🇵 JP🍉日本4
-    type: vless
-    server: fsjp13.46852.top
-    port: 26070
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: npvD4OlaoFoKHRkBPNc7ayjoWP0ANp2D9ACkvv_-0iE
-      short-id: '23'
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇯🇵 JP🍉日本5
-    type: vless
-    server: fsjp13.46852.top
-    port: 26071
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: xP_KwFb3TzAYDolQHgGPuqqKJMMA54ZBIiPDheKgaCw
-      short-id: '61'
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 直连 日本 06 | 0.5x
-    type: anytls
-    server: 153.126.195.86
-    port: 8443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
-    __provider: Stardream
-  - name: 直连 香港 02 | 0.5x
-    type: anytls
-    server: 154.203.244.4
-    port: 8443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
-    __provider: Stardream
-  - name: 🇸🇬 新加坡01 境外中转
-    server: a6.mhlnf.cn
-    port: 65472
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    __provider: CloudFisher
-  - name: 🇸🇬 SG🍉新加坡2
-    type: vless
-    server: fsjp13.46852.top
-    port: 26064
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: H5CGm4KFN1QNml0BeWSh6A7Tmqw9fQHtd_PTYxcY1Qo
-      short-id: 74e002cc019a57c6
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇸🇬 SG🍓新加坡6
-    type: vless
-    server: fsjp13.46852.top
-    port: 25021
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: _HwKZ-3Ht5RLzvphVA0VQqiNhk7y-I-4pzPVaPYIlWU
-      short-id: 335889d0
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇹🇼 tw_台湾3
-    type: vless
-    server: fsjp13.46852.top
-    port: 11148
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: TMsneYI0feE2vrIQrAwp2hE_6B3SVmESrbt4AMeBgCM
-      short-id: 329ccce4649d0c
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇹🇼 tw_台湾5
-    type: vless
-    server: fsjp13.46852.top
-    port: 11150
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: mGm34gsQz4MSu6NKr3qgC3QYZIyAjzJiqtGe0dQ8iXo
-      short-id: '6491'
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰 hk_香港4
-    type: vless
-    server: fsjp13.46852.top
-    port: 50206
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: ts6Bc_MR4K3-rh8373_oRs-E_b1jK4j8ivUeshN_Pl4
-      short-id: de4ff5bf6a196b
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 🇭🇰Hongkong 香港-11
-    type: anytls
-    server: node01.ylgtm.com
-    port: 60311
-    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
-    udp: true
-    sni: yahu.com
-    skip-cert-verify: true
-    __provider: youlian
-  - name: 🇭🇰Hongkong 香港-13
-    type: anytls
-    server: node01.ylgtm.com
-    port: 60476
-    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
-    udp: true
-    sni: aiqiyi.com
-    skip-cert-verify: true
-    __provider: youlian
-  - name: 🇯🇵 日本02
-    type: vless
-    server: 18.139.225.13
-    port: 54005
-    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: true
-    servername: www.tue.nl
-    reality-opts:
-      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
-      short-id: 35e0273c5d256abb
-    client-fingerprint: chrome
-    network: tcp
-    __provider: CloudFisher
-  - name: 🇯🇵日本东京1号
-    server: 103.62.49.131
-    port: 55000
-    ports: 55000-56000
-    mport: 55000-56000
-    udp: true
-    skip-cert-verify: true
-    sni: fastcdn.hoyoverse.com
-    type: hysteria2
-    password: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
-    fingerprint: 6ccc03cd8620636580b4903a9d9975a255ed2770a779d1c57e1785a731a88dea
-    __provider: jisu
-  - name: 🇯🇵日本三网优化01
-    type: vless
-    server: c8217-b2a.h2.49d2.jse11.1.b297.djjsvip.cfd
-    port: 8000
-    uuid: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
-    udp: true
-    tls: true
-    skip-cert-verify: false
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    servername: www.delamer.co.jp
-    reality-opts:
-      public-key: tpxyz9wkFuetOl4-nf_fx4l3DaJwEk9Qnglpuo9B2n4
-      short-id: 8743f0c33aaf69fa
-    __provider: jisu
-  - name: 🇯🇵Japan 日本-11
-    type: anytls
-    server: node01.ylgtm.com
-    port: 60331
-    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
-    udp: true
-    sni: baidu.com
-    skip-cert-verify: true
-    __provider: youlian
-  - name: 🇸🇬 新加坡直连
-    server: 141.11.43.220
-    port: 443
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    __provider: CloudFisher
-  - name: 🇸🇬 SG🍉新加坡1
-    type: vless
-    server: fsjp13.46852.top
-    port: 26063
-    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: false
-    servername: cloudflare.com
-    reality-opts:
-      public-key: 1K_Lfl4QmsA9Ga4unAPZZ7GAPOCrNypqpqx440AnizA
-      short-id: 6563d4
-    client-fingerprint: ios
-    network: tcp
-    __provider: shanshuiyun
-  - name: 隧道 香港 01 | 1x
-    type: ss
-    server: net-a-b.slownetcncu.com
-    port: 44800
-    cipher: 2022-blake3-aes-256-gcm
-    password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
-    udp: true
-    __provider: Stardream
-  - name: 隧道 香港 03 | 1x
-    type: ss
-    server: net-a-b.slownetcncu.com
-    port: 44802
-    cipher: 2022-blake3-aes-256-gcm
-    password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
-    udp: true
-    __provider: Stardream
-  - name: 直连 台湾 02 | 0.5x
-    type: vless
-    server: cn-sccd-ct-03-02.bili-tv.com
-    port: 443
-    uuid: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    udp: true
-    tls: true
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    servername: cn-sccd-ct-03-02.bili-tv.com
-    network: xhttp
-    xhttp-opts:
-      path: /f6d93c8849ba0bc057138ccd
-      host: cn-sccd-ct-03-02.bili-tv.com
-      mode: packet-up
-    __provider: Stardream
-  - name: 直连 台湾 04 | 0.5x
-    server: k4.gslb.71edge.work
-    port: 8843
-    udp: true
-    skip-cert-verify: true
-    sni: updates.cdn-apple.com
-    type: hysteria2
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    __provider: Stardream
-  - name: 直连 台湾 05 | 0.5x
-    server: k5.gslb.71edge.work
-    port: 8843
-    udp: true
-    skip-cert-verify: true
-    sni: updates.cdn-apple.com
-    type: hysteria2
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    __provider: Stardream
-  - name: 直连 台湾 07 | 0.5x
-    type: anytls
-    server: k2.gslb.71edge.work
-    port: 9443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
-    __provider: Stardream
-  - name: 直连 台湾 09 | 0.5x
-    type: anytls
-    server: k4.gslb.71edge.work
-    port: 9443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
-    __provider: Stardream
-  - name: 直连 台湾 10 | 0.5x
-    type: anytls
-    server: k5.gslb.71edge.work
-    port: 9443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
-    __provider: Stardream
+      url: http://www.gstatic.com/generate_204
+      interval: 10
+      lazy: false
+      max-failed-times: 3
 proxy-groups:
-  - name: ⭐ 优选集
-    type: url-test
-    proxies:
-      - 🇭🇰 香港01 境外中转
-      - 🇭🇰 hk_香港2
-      - 🇭🇰 hk_香港5
-      - 🇭🇰 hk_香港6
-      - 🇭🇰香港02
-      - 🇸🇬 SG🍉新加坡3
-      - 🇹🇭泰国
-      - 🇹🇼 tw_台湾1
-      - 🇹🇼 tw_台湾2
-      - 🇹🇼 tw_台湾6
-      - 备用香港1
-      - 🇭🇰 hk 香港_1
-      - 🇭🇰 hk_香港1
-      - 🇭🇰 hk_香港3
-      - 🇯🇵 JP🍉日本4
-      - 🇯🇵 JP🍉日本5
-      - 直连 日本 06 | 0.5x
-      - 直连 香港 02 | 0.5x
-      - 🇸🇬 新加坡01 境外中转
-      - 🇸🇬 SG🍉新加坡2
-      - 🇸🇬 SG🍓新加坡6
-      - 🇹🇼 tw_台湾3
-      - 🇹🇼 tw_台湾5
-      - 🇭🇰 hk_香港4
-      - 🇭🇰Hongkong 香港-11
-      - 🇭🇰Hongkong 香港-13
-      - 🇯🇵 日本02
-      - 🇯🇵日本东京1号
-      - 🇯🇵日本三网优化01
-      - 🇯🇵Japan 日本-11
-      - 🇸🇬 新加坡直连
-      - 🇸🇬 SG🍉新加坡1
-      - 隧道 香港 01 | 1x
-      - 隧道 香港 03 | 1x
-      - 直连 台湾 02 | 0.5x
-      - 直连 台湾 04 | 0.5x
-      - 直连 台湾 05 | 0.5x
-      - 直连 台湾 07 | 0.5x
-      - 直连 台湾 09 | 0.5x
-      - 直连 台湾 10 | 0.5x
-    url: http://www.gstatic.com/generate_204
-    interval: 10
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🚀 主出口
+  - name: ⭐ 智能选择
     type: fallback
-    proxies:
-      - ⭐ 优选集
-      - 🇭🇰 香港01 境外中转
-      - 🇭🇰 hk_香港2
-      - 🇭🇰 hk_香港5
-      - 🇭🇰 hk_香港6
-      - 🇭🇰香港02
+    use:
+      - live
     url: http://www.gstatic.com/generate_204
-    interval: 10
+    interval: 30
     lazy: false
-    max-failed-times: 2
-  - name: ⚡ 极速
+    max-failed-times: 3
+  - name: 🔥 最快节点
     type: url-test
-    proxies:
-      - 🇭🇰 香港01 境外中转
-      - 🇭🇰 hk_香港2
-      - 🇭🇰 hk_香港5
-      - 🇭🇰 hk_香港6
-      - 🇭🇰香港02
+    use:
+      - live
     url: http://www.gstatic.com/generate_204
     interval: 10
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    tolerance: 50
+    max-failed-times: 3
   - name: 🇭🇰 香港
-    type: url-test
-    proxies:
-      - 🇭🇰 香港01 境外中转
-      - 🇭🇰 hk_香港2
-      - 🇭🇰 hk_香港5
-      - 🇭🇰 hk_香港6
-      - 🇭🇰香港02
-      - 🇭🇰 hk 香港_1
-      - 🇭🇰 hk_香港1
-      - 🇭🇰 hk_香港3
-      - 🇭🇰 hk_香港4
-      - 🇭🇰Hongkong 香港-11
-      - 🇭🇰Hongkong 香港-13
+    type: fallback
+    use:
+      - live
+    filter: 🇭🇰|香港|HK|hk_
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇸🇬 新加坡
-    type: url-test
-    proxies:
-      - 🇸🇬 SG🍉新加坡3
-      - 🇸🇬 新加坡01 境外中转
-      - 🇸🇬 SG🍉新加坡2
-      - 🇸🇬 SG🍓新加坡6
-      - 🇸🇬 新加坡直连
-      - 🇸🇬 SG🍉新加坡1
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇹🇭 泰国
-    type: url-test
-    proxies:
-      - 🇹🇭泰国
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    max-failed-times: 3
   - name: 🇹🇼 台湾
-    type: url-test
-    proxies:
-      - 🇹🇼 tw_台湾1
-      - 🇹🇼 tw_台湾2
-      - 🇹🇼 tw_台湾6
-      - 🇹🇼 tw_台湾3
-      - 🇹🇼 tw_台湾5
+    type: fallback
+    use:
+      - live
+    filter: 🇹🇼|台湾|臺灣|TW|tw_
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🌐 其他
-    type: url-test
-    proxies:
-      - 备用香港1
-      - 直连 日本 06 | 0.5x
-      - 直连 香港 02 | 0.5x
-      - 隧道 香港 01 | 1x
-      - 隧道 香港 03 | 1x
-      - 直连 台湾 02 | 0.5x
-      - 直连 台湾 04 | 0.5x
-      - 直连 台湾 05 | 0.5x
-      - 直连 台湾 07 | 0.5x
-      - 直连 台湾 09 | 0.5x
-      - 直连 台湾 10 | 0.5x
-    url: http://www.gstatic.com/generate_204
-    interval: 60
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    max-failed-times: 3
   - name: 🇯🇵 日本
-    type: url-test
-    proxies:
-      - 🇯🇵 JP🍉日本4
-      - 🇯🇵 JP🍉日本5
-      - 🇯🇵 日本02
-      - 🇯🇵日本东京1号
-      - 🇯🇵日本三网优化01
-      - 🇯🇵Japan 日本-11
+    type: fallback
+    use:
+      - live
+    filter: 🇯🇵|日本|JP|JP_|Japan
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🔀 手动
+    max-failed-times: 3
+  - name: 🇸🇬 新加坡
+    type: fallback
+    use:
+      - live
+    filter: 🇸🇬|新加坡|SG|SG_
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    max-failed-times: 3
+  - name: 🤖 AI 服务
     type: select
     proxies:
-      - 🚀 主出口
-      - ⭐ 优选集
-      - ⚡ 极速
-      - 🇭🇰 香港01 境外中转
-      - 🇭🇰 hk_香港2
-      - 🇭🇰 hk_香港5
-      - 🇭🇰 hk_香港6
-      - 🇭🇰香港02
-      - 🇸🇬 SG🍉新加坡3
-      - 🇹🇭泰国
-      - 🇹🇼 tw_台湾1
-      - 🇹🇼 tw_台湾2
-      - 🇹🇼 tw_台湾6
-      - 备用香港1
-      - 🇭🇰 hk 香港_1
-      - 🇭🇰 hk_香港1
-      - 🇭🇰 hk_香港3
-      - 🇯🇵 JP🍉日本4
-      - 🇯🇵 JP🍉日本5
-      - 直连 日本 06 | 0.5x
-      - 直连 香港 02 | 0.5x
-      - 🇸🇬 新加坡01 境外中转
-      - 🇸🇬 SG🍉新加坡2
-      - 🇸🇬 SG🍓新加坡6
-      - 🇹🇼 tw_台湾3
-      - 🇹🇼 tw_台湾5
-      - 🇭🇰 hk_香港4
-      - 🇭🇰Hongkong 香港-11
-      - 🇭🇰Hongkong 香港-13
-      - 🇯🇵 日本02
-      - 🇯🇵日本东京1号
-      - 🇯🇵日本三网优化01
-      - 🇯🇵Japan 日本-11
-      - 🇸🇬 新加坡直连
-      - 🇸🇬 SG🍉新加坡1
-      - 隧道 香港 01 | 1x
-      - 隧道 香港 03 | 1x
-      - 直连 台湾 02 | 0.5x
-      - 直连 台湾 04 | 0.5x
-      - 直连 台湾 05 | 0.5x
-      - 直连 台湾 07 | 0.5x
-      - 直连 台湾 09 | 0.5x
-      - 直连 台湾 10 | 0.5x
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+  - name: 🎬 Netflix
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+  - name: 📺 动画疯
+    type: select
+    proxies:
+      - 🇹🇼 台湾
+  - name: 🛒 Google Play
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+  - name: 🔀 手动切换
+    type: select
+    use:
+      - live
+    proxies:
+      - ⭐ 智能选择
+      - 🔥 最快节点
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+      - 🤖 AI 服务
+      - 🎬 Netflix
+      - 📺 动画疯
+      - 🛒 Google Play
       - DIRECT
   - name: 🎯 直连
     type: select
     proxies:
       - DIRECT
-      - 🚀 主出口
+      - ⭐ 智能选择
   - name: 🛑 拦截
     type: select
     proxies:
       - REJECT
       - DIRECT
 rules:
+  - DOMAIN-SUFFIX,githubusercontent.com,🎯 直连
+  - DOMAIN-SUFFIX,github.com,🎯 直连
+  - DOMAIN-SUFFIX,jsdelivr.net,🎯 直连
+  - DOMAIN-SUFFIX,ghproxy.net,🎯 直连
+  - DOMAIN-SUFFIX,gh-proxy.com,🎯 直连
+  - DOMAIN-SUFFIX,openai.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,oaistatic.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,sora.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,anthropic.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,claude.ai,🤖 AI 服务
+  - DOMAIN-SUFFIX,netflix.com,🎬 Netflix
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 Netflix
+  - DOMAIN-SUFFIX,nflximg.net,🎬 Netflix
+  - DOMAIN-SUFFIX,nflxext.net,🎬 Netflix
+  - DOMAIN-SUFFIX,nflxso.net,🎬 Netflix
+  - DOMAIN-SUFFIX,fast.com,🎬 Netflix
+  - DOMAIN-SUFFIX,gamer.com.tw,📺 动画疯
+  - DOMAIN-SUFFIX,bahamut.com.tw,📺 动画疯
+  - DOMAIN-SUFFIX,hinet.net,📺 动画疯
+  - DOMAIN-SUFFIX,gamer-cdn.com,📺 动画疯
+  - DOMAIN-SUFFIX,play.google.com,🛒 Google Play
+  - DOMAIN-SUFFIX,android.com,🛒 Google Play
+  - DOMAIN-SUFFIX,youtube.com,🛒 Google Play
+  - DOMAIN-SUFFIX,googlevideo.com,🛒 Google Play
+  - DOMAIN-SUFFIX,ytimg.com,🛒 Google Play
+  - DOMAIN-SUFFIX,ggpht.com,🛒 Google Play
+  - DOMAIN-SUFFIX,gstatic.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,googleapis.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,googleusercontent.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,google.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,google.com.hk,⭐ 智能选择
+  - DOMAIN-SUFFIX,gvt1.com,⭐ 智能选择
+  - DOMAIN-SUFFIX,gvt2.com,⭐ 智能选择
   - DOMAIN-SUFFIX,local,🎯 直连
   - IP-CIDR,127.0.0.0/8,🎯 直连,no-resolve
   - IP-CIDR,192.168.0.0/16,🎯 直连,no-resolve
   - IP-CIDR,10.0.0.0/8,🎯 直连,no-resolve
   - IP-CIDR,172.16.0.0/12,🎯 直连,no-resolve
   - GEOIP,CN,🎯 直连
-  - MATCH,🚀 主出口
+  - MATCH,⭐ 智能选择
