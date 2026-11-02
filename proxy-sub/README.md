@@ -35,7 +35,8 @@ http://127.0.0.1:18888/clash.yaml
 | 版本 | 链接 | provider 源 | 拉取间隔 | 适用 |
 | --- | --- | --- | --- | --- |
 | **本机版** | `http://127.0.0.1:18888/clash.yaml` | 本机 watcher | **10 秒** | 就在这台电脑上用（FlClash/Clash Verge） |
-| **远端版** | `proxy-sub/clash-live-provider.yaml` | GitHub raw | 300 秒 | 手机/另一台电脑/外网 |
+| **远端版** | `proxy-sub/clash-live-provider.yaml` | GitHub raw | 300 秒 | 另一台电脑/外网 |
+| **手机版** | `http://127.0.0.1:18888/clash.yaml`（经 adb reverse） | 本机 watcher | **10 秒** | Android 手机（USB/WiFi adb 连着这台电脑时） |
 
 远端版受 raw CDN `max-age=300` 限制，写 10 秒也没意义（每次拉到的是同一份缓存）。
 本机版没有 CDN，才能做到 10 秒。**两个文件都由同一个 watcher 生成，节点内容一致。**
@@ -151,7 +152,11 @@ schtasks //Run //TN ProxyLiveWatcher
    所以外部无法用 API 驱动 FlClash 的内核，切换只能靠内核自身的 `url-test`/`fallback`。
 2. **Candytally / llG-New / LIME 三家订阅已失效**（403 / DNS 失败 / 非 YAML），池子里不含它们。
 3. 端口 `18888` 被占用时 watcher 会在日志里报 `!! serve 端口错误`，本机源不可用，GitHub 静态链接不受影响。
-4. 本机源只监听 `127.0.0.1`，**不对外网开放**，手机上用请走 GitHub 静态链接或自建反代。
+4. 本机源只监听 `127.0.0.1`，**不对局域网/外网开放**（实测 AP 隔离导致手机 ping 不通本机）。
+5. **手机走 adb reverse**：`adb reverse tcp:18888 tcp:18888` 把手机的 `127.0.0.1:18888` 映射到这台电脑，
+   手机 FlClash 导入 `http://127.0.0.1:18888/clash.yaml` 即获得与电脑同样的 10 秒实时性。
+   保活脚本 `work/phone/adb-reverse-keepalive.cmd`，计划任务 `AdbReverse18888` 每分钟检查一次，
+   adb 断连 1 分钟内自动恢复；代价是**手机必须一直连着本机 adb**（USB 或同网 adb over WiFi）。
 
 ---
 
