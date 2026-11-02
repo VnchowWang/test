@@ -38,84 +38,134 @@ proxy-providers:
     url: https://raw.githubusercontent.com/VnchowWang/test/main/proxy-sub/live-provider.yaml
     interval: 300
     path: ./live-provider.yaml
-    exclude-filter: (?i)过期|剩余|流量|官网|到期|重置|套餐|群组|Expire|Traffic
+    exclude-filter: (?i)过期|剩余|流量|官网|到期|重置|套餐|群组|防失联|失联|距离下次|Expire|Traffic|Website
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 10
       lazy: false
+      max-failed-times: 3
 proxy-groups:
-  - name: ⭐ 优选集
-    type: url-test
-    use:
-      - live
-    url: http://www.gstatic.com/generate_204
-    interval: 10
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🚀 主出口
+  - name: ⭐ 智能选择
     type: fallback
-    proxies:
-      - ⭐ 优选集
     use:
       - live
     url: http://www.gstatic.com/generate_204
-    interval: 10
+    interval: 30
     lazy: false
     max-failed-times: 3
-  - name: 🔀 手动
-    type: select
-    proxies:
-      - 🚀 主出口
-      - ⭐ 优选集
+  - name: 🔥 最快节点
+    type: url-test
     use:
       - live
+    url: http://www.gstatic.com/generate_204
+    interval: 10
+    lazy: false
+    tolerance: 50
+    max-failed-times: 3
   - name: 🇭🇰 香港
-    type: url-test
+    type: fallback
     use:
       - live
-    filter: 🇭🇰|香港
+    filter: 🇭🇰|香港|HK|hk_
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    max-failed-times: 3
   - name: 🇹🇼 台湾
-    type: url-test
+    type: fallback
     use:
       - live
-    filter: 🇹🇼|台湾
+    filter: 🇹🇼|台湾|臺灣|TW|tw_
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    max-failed-times: 3
   - name: 🇯🇵 日本
-    type: url-test
+    type: fallback
     use:
       - live
-    filter: 🇯🇵|日本
+    filter: 🇯🇵|日本|JP|JP_|Japan
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    max-failed-times: 3
   - name: 🇸🇬 新加坡
-    type: url-test
+    type: fallback
     use:
       - live
-    filter: 🇸🇬|新加坡
+    filter: 🇸🇬|新加坡|SG|SG_
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
-    tolerance: 0
-    max-failed-times: 2
+    max-failed-times: 3
+  - name: 🇵🇭 菲律宾
+    type: fallback
+    use:
+      - live
+    filter: 🇵🇭|菲律宾|PH
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    max-failed-times: 3
+  - name: 🤖 AI 服务
+    type: fallback
+    use:
+      - live
+    filter: 🇭🇰|香港|🇹🇼|台湾|臺灣|🇯🇵|日本|🇸🇬|新加坡|🇺🇸|美国|HK|TW|JP|SG|US
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    max-failed-times: 3
+  - name: 🎬 Netflix
+    type: fallback
+    use:
+      - live
+    filter: 🇭🇰|香港|🇹🇼|台湾|臺灣|🇯🇵|日本|🇸🇬|新加坡|HK|TW|JP|SG
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    max-failed-times: 3
+  - name: 📺 动画疯
+    type: fallback
+    use:
+      - live
+    filter: 🇹🇼|台湾|臺灣|TW|tw_
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    max-failed-times: 3
+  - name: 🛒 Google Play
+    type: fallback
+    use:
+      - live
+    filter: 🇭🇰|香港|🇹🇼|台湾|臺灣|🇯🇵|日本|🇸🇬|新加坡|🇺🇸|美国|HK|TW|JP|SG|US
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+    lazy: false
+    max-failed-times: 3
+  - name: 🔀 手动切换
+    type: select
+    use:
+      - live
+    proxies:
+      - ⭐ 智能选择
+      - 🔥 最快节点
+      - 🇭🇰 香港
+      - 🇹🇼 台湾
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+      - 🇵🇭 菲律宾
+      - 🤖 AI 服务
+      - 🎬 Netflix
+      - 📺 动画疯
+      - 🛒 Google Play
+      - DIRECT
   - name: 🎯 直连
     type: select
     proxies:
       - DIRECT
-      - 🚀 主出口
+      - ⭐ 智能选择
   - name: 🛑 拦截
     type: select
     proxies:
@@ -127,10 +177,33 @@ rules:
   - DOMAIN-SUFFIX,jsdelivr.net,🎯 直连
   - DOMAIN-SUFFIX,ghproxy.net,🎯 直连
   - DOMAIN-SUFFIX,gh-proxy.com,🎯 直连
+  - DOMAIN-SUFFIX,openai.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,oaistatic.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,sora.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,anthropic.com,🤖 AI 服务
+  - DOMAIN-SUFFIX,claude.ai,🤖 AI 服务
+  - DOMAIN-SUFFIX,netflix.com,🎬 Netflix
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 Netflix
+  - DOMAIN-SUFFIX,nflximg.net,🎬 Netflix
+  - DOMAIN-SUFFIX,nflxext.net,🎬 Netflix
+  - DOMAIN-SUFFIX,nflxso.net,🎬 Netflix
+  - DOMAIN-SUFFIX,fast.com,🎬 Netflix
+  - DOMAIN-SUFFIX,gamer.com.tw,📺 动画疯
+  - DOMAIN-SUFFIX,bahamut.com.tw,📺 动画疯
+  - DOMAIN-SUFFIX,hinet.net,📺 动画疯
+  - DOMAIN-SUFFIX,gamer-cdn.com,📺 动画疯
+  - DOMAIN-SUFFIX,play.google.com,🛒 Google Play
+  - DOMAIN-SUFFIX,android.com,🛒 Google Play
+  - DOMAIN-SUFFIX,youtube.com,🛒 Google Play
+  - DOMAIN-SUFFIX,googlevideo.com,🛒 Google Play
+  - DOMAIN-SUFFIX,ytimg.com,🛒 Google Play
+  - DOMAIN-SUFFIX,ggpht.com,🛒 Google Play
   - DOMAIN-SUFFIX,local,🎯 直连
   - IP-CIDR,127.0.0.0/8,🎯 直连,no-resolve
   - IP-CIDR,192.168.0.0/16,🎯 直连,no-resolve
   - IP-CIDR,10.0.0.0/8,🎯 直连,no-resolve
   - IP-CIDR,172.16.0.0/12,🎯 直连,no-resolve
   - GEOIP,CN,🎯 直连
-  - MATCH,🚀 主出口
+  - MATCH,⭐ 智能选择
