@@ -75,7 +75,7 @@ proxy-groups:
     type: url-test
     use:
       - live
-    filter: 🇭🇰
+    filter: 🇭🇰|香港
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
@@ -85,7 +85,7 @@ proxy-groups:
     type: url-test
     use:
       - live
-    filter: 🇹🇼
+    filter: 🇹🇼|台湾
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
@@ -95,7 +95,7 @@ proxy-groups:
     type: url-test
     use:
       - live
-    filter: 🇯🇵
+    filter: 🇯🇵|日本
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
@@ -105,127 +105,7 @@ proxy-groups:
     type: url-test
     use:
       - live
-    filter: 🇸🇬
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇺🇸 美国
-    type: url-test
-    use:
-      - live
-    filter: 🇺🇸
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇰🇷 韩国
-    type: url-test
-    use:
-      - live
-    filter: 🇰🇷
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇬🇧 英国
-    type: url-test
-    use:
-      - live
-    filter: 🇬🇧
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇩🇪 德国
-    type: url-test
-    use:
-      - live
-    filter: 🇩🇪
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇳🇱 荷兰
-    type: url-test
-    use:
-      - live
-    filter: 🇳🇱
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇫🇷 法国
-    type: url-test
-    use:
-      - live
-    filter: 🇫🇷
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇹🇷 土耳其
-    type: url-test
-    use:
-      - live
-    filter: 🇹🇷
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇹🇭 泰国
-    type: url-test
-    use:
-      - live
-    filter: 🇹🇭
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇮🇳 印度
-    type: url-test
-    use:
-      - live
-    filter: 🇮🇳
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇦🇺 澳大利亚
-    type: url-test
-    use:
-      - live
-    filter: 🇦🇺
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇨🇦 加拿大
-    type: url-test
-    use:
-      - live
-    filter: 🇨🇦
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    lazy: false
-    tolerance: 0
-    max-failed-times: 2
-  - name: 🇷🇺 俄罗斯
-    type: url-test
-    use:
-      - live
-    filter: 🇷🇺
+    filter: 🇸🇬|新加坡
     url: http://www.gstatic.com/generate_204
     interval: 30
     lazy: false
