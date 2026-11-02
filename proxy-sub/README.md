@@ -30,6 +30,16 @@ http://127.0.0.1:18888/clash.yaml
 > 12 个公共镜像实测 push 后 284 秒内只有 1/12 拿到新内容。而 provider 的 URL 必须固定，
 > 所以「GitHub 镜像 + provider」这条路做不出 10 秒级实时性——只有本机 HTTP 源可以。
 
+### 两个版本的分工（别混用）
+
+| 版本 | 链接 | provider 源 | 拉取间隔 | 适用 |
+| --- | --- | --- | --- | --- |
+| **本机版** | `http://127.0.0.1:18888/clash.yaml` | 本机 watcher | **10 秒** | 就在这台电脑上用（FlClash/Clash Verge） |
+| **远端版** | `proxy-sub/clash-live-provider.yaml` | GitHub raw | 300 秒 | 手机/另一台电脑/外网 |
+
+远端版受 raw CDN `max-age=300` 限制，写 10 秒也没意义（每次拉到的是同一份缓存）。
+本机版没有 CDN，才能做到 10 秒。**两个文件都由同一个 watcher 生成，节点内容一致。**
+
 ### 本机源的其它路由
 
 | 路由 | 内容 |
