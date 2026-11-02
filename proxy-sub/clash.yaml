@@ -1,0 +1,1609 @@
+# ============================================================
+# 多机场优选订阅 — 由本地实测生成
+# 生成时间: 2026-11-02T05:54:57.641Z
+# 节点总数: 62
+# 数据来源: 8 家机场订阅 + 本地 mihomo 真实测速/解锁/稳定性
+# ============================================================
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+proxies:
+  - name: 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 25020
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: t5r_xMFsIL77-QrAeezazh_ZoXF_SkN5zrwRJNkIfRc
+      short-id: 47cc
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 25018
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: smG7kIkhMTz3faKsEa-MmD2EVLlLuG_6BKTvPxlkSC4
+      short-id: 4fa398
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 26063
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: 1K_Lfl4QmsA9Ga4unAPZZ7GAPOCrNypqpqx440AnizA
+      short-id: 6563d4
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 50206
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: ts6Bc_MR4K3-rh8373_oRs-E_b1jK4j8ivUeshN_Pl4
+      short-id: de4ff5bf6a196b
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇭🇰香港02｜YT｜96ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 58546
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: nKbkP7Uzef2k4Uj5P7GqdsX7d7voTuCgdHYRAaFYnEM
+      short-id: 0bea3588c2
+    client-fingerprint: ios
+    network: tcp
+  - name: 星梦｜🇭🇰香港01｜YT｜100ms
+    type: anytls
+    server: 154.203.244.4
+    port: 8443
+    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+    sni: swdownload.apple.com
+    skip-cert-verify: true
+  - name: 山水云｜🇭🇰香港03｜YT｜97ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 50205
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: 4_iO1h3Vd8CGOHdXsqenQLLHGzBxGMP3nodVKlwxNUY
+      short-id: d0
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 11150
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: mGm34gsQz4MSu6NKr3qgC3QYZIyAjzJiqtGe0dQ8iXo
+      short-id: '6491'
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 11132
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: Q7RUYs0oqifpM7Nc2sfr2rUKVavHbxgPwB22wp8Nj3A
+      short-id: 0b
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇹🇼台湾03｜GPT｜127ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 11148
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: TMsneYI0feE2vrIQrAwp2hE_6B3SVmESrbt4AMeBgCM
+      short-id: 329ccce4649d0c
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+    type: vless
+    server: unamecf3.xn--ghqu5fm27b67w.com
+    port: 443
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: null
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: ssjp.1028cfym.shop
+    ech-opts:
+      enable: true
+    client-fingerprint: firefox
+    network: ws
+    ws-opts:
+      path: /cf/ssjp1
+      headers:
+        Host: ssjp.1028cfym.shop
+  - name: 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 25016
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: 5CaWYQBb1PDUEpwhwNEupamej9QxmeKLhT8nirevZnA
+      short-id: 815cfcc5427b886a
+    client-fingerprint: ios
+    network: tcp
+  - name: 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 26068
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: NfJ_DB6hlYwBuVxBddaTP-BLRBls2ZPczyus6AvuBzs
+      short-id: d7118f
+    client-fingerprint: ios
+    network: tcp
+  - name: 友连｜🇯🇵日本01｜GPT+YT｜181ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60331
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: baidu.com
+    skip-cert-verify: true
+  - name: 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+    type: vless
+    server: cn-sccd-ct-03-02.bili-tv.com
+    port: 443
+    uuid: b3e10270-bd6c-4f38-9443-67bdabc73edd
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    servername: cn-sccd-ct-03-02.bili-tv.com
+    network: xhttp
+    xhttp-opts:
+      path: /f6d93c8849ba0bc057138ccd
+      host: cn-sccd-ct-03-02.bili-tv.com
+      mode: packet-up
+  - name: 友连｜🇯🇵日本02｜GPT+YT｜189ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60451
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: douyu.com
+    skip-cert-verify: true
+  - name: 友连｜🇯🇵日本03｜GPT+YT｜175ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60327
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: hy.com
+    skip-cert-verify: true
+  - name: 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+    type: anytls
+    server: 153.126.195.86
+    port: 8443
+    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+    sni: swdownload.apple.com
+    skip-cert-verify: true
+  - name: 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+    type: anytls
+    server: 153.120.7.27
+    port: 8443
+    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+    sni: swdownload.apple.com
+    skip-cert-verify: true
+  - name: 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+    type: anytls
+    server: k1.gslb.71edge.work
+    port: 9443
+    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
+    client-fingerprint: chrome
+    udp: true
+    alpn:
+      - h2
+      - http/1.1
+    sni: swdownload.apple.com
+    skip-cert-verify: true
+  - name: 友连｜🇭🇰香港01｜YT｜184ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60311
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: yahu.com
+    skip-cert-verify: true
+  - name: 友连｜🇭🇰香港02｜YT｜193ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60469
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: huya.com
+    skip-cert-verify: true
+  - name: 友连｜🇭🇰香港03｜YT｜206ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60308
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: vivo.com
+    skip-cert-verify: true
+  - name: 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60363
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: 4399.com
+    skip-cert-verify: true
+  - name: 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60345
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: baidu.com
+    skip-cert-verify: true
+  - name: 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60343
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: pad.com
+    skip-cert-verify: true
+  - name: 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60445
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: 58.com
+    skip-cert-verify: true
+  - name: 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+    server: a6.mhlnf.cn
+    port: 41391
+    sni: www.bing.com
+    up: 10000
+    down: 10000
+    skip-cert-verify: true
+    type: hysteria2
+    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+  - name: 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60389
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: huya.com
+    skip-cert-verify: true
+  - name: 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60490
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: qq.com
+    skip-cert-verify: true
+  - name: 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+    type: vless
+    server: cn-sccd-ct-03-01.bili-tv.com
+    port: 443
+    uuid: b3e10270-bd6c-4f38-9443-67bdabc73edd
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    servername: cn-sccd-ct-03-01.bili-tv.com
+    network: xhttp
+    xhttp-opts:
+      path: /e82493f3429bf94e23d17fa1
+      host: cn-sccd-ct-03-01.bili-tv.com
+      mode: packet-up
+  - name: 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60491
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: baidu.com
+    skip-cert-verify: true
+  - name: 极速｜🇺🇸美国01｜GPT+YT｜253ms
+    type: vless
+    server: 172.67.176.108
+    port: 443
+    uuid: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: jlsus2.jswstlsweb.top
+    network: ws
+    ws-opts:
+      path: /jsjc/us2
+      headers:
+        Host: jlsus2.jswstlsweb.top
+  - name: 极速｜🇺🇸美国02｜GPT+YT｜253ms
+    type: vless
+    server: 172.67.176.108
+    port: 443
+    uuid: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: firefox
+    servername: jlsus3.jswstlsweb.top
+    network: ws
+    ws-opts:
+      path: /jsjc/us3
+      headers:
+        Host: jlsus3.jswstlsweb.top
+  - name: 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60391
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: baidu.com
+    skip-cert-verify: true
+  - name: 极速｜🇺🇸美国03｜GPT｜249ms
+    type: vless
+    server: 172.67.176.108
+    port: 443
+    uuid: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: chrome
+    servername: jlsus1.jswstlsweb.top
+    network: ws
+    ws-opts:
+      path: /jsjc/us1
+      headers:
+        Host: jlsus1.jswstlsweb.top
+  - name: MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+    type: anytls
+    server: 89.45.45.248
+    port: 8443
+    password: c480019d-490f-3336-99a8-cfe8a15d1171
+    udp: true
+    sni: dash.jiyeai.com
+  - name: 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+    server: a6.mhlnf.cn
+    port: 19418
+    sni: www.bing.com
+    up: 10000
+    down: 10000
+    skip-cert-verify: true
+    type: hysteria2
+    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+  - name: 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+    server: a6.mhlnf.cn
+    port: 43751
+    sni: www.bing.com
+    up: 10000
+    down: 10000
+    skip-cert-verify: true
+    type: hysteria2
+    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+  - name: 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 26066
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: a-ffc_HMzoGOHvaEsOtlwa8VP_HuUFs1VvAeDfqUy2Q
+      short-id: bed1
+    client-fingerprint: ios
+    network: tcp
+  - name: 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60364
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: aiqiyi.com
+    skip-cert-verify: true
+  - name: 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+    type: vless
+    server: unamecf3.xn--ghqu5fm27b67w.com
+    port: 443
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: null
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: ssus.1028cfym.shop
+    ech-opts:
+      enable: true
+    client-fingerprint: firefox
+    network: ws
+    ws-opts:
+      path: /cf/ssus1
+      headers:
+        Host: ssus.1028cfym.shop
+  - name: 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60471
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: aiqiyi.com
+    skip-cert-verify: true
+  - name: 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+    type: vless
+    server: fsjp13.46852.top
+    port: 26072
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: ZXpG4EKqRxgGHueyXUFTiMkWSpOCvfoM54CVVEC2hSU
+      short-id: '53'
+    client-fingerprint: ios
+    network: tcp
+  - name: 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60485
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: albb.com
+    skip-cert-verify: true
+  - name: 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+    server: a6.mhlnf.cn
+    port: 30875
+    sni: www.bing.com
+    up: 10000
+    down: 10000
+    skip-cert-verify: true
+    type: hysteria2
+    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+  - name: 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+    type: vless
+    server: c8217-b2a.h1.49d2.5e11.613.b297.djjsvip.cfd
+    port: 8443
+    uuid: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: hqLKHFfHt56-wcQXaPlG4vyrBNHX6Ew3glLkj0X2Cxo
+      short-id: a59821e9c2004f5d
+  - name: 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60418
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: baidu.com
+    skip-cert-verify: true
+  - name: 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60421
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: almm.com
+    skip-cert-verify: true
+  - name: 友连｜🇮🇳印度01｜GPT｜415ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60425
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: elm.com
+    skip-cert-verify: true
+  - name: 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60415
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: elm.com
+    skip-cert-verify: true
+  - name: 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60427
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: pinduoduo.com
+    skip-cert-verify: true
+  - name: 友连｜🇨🇱智利01｜GPT+YT｜464ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60481
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: uu.com
+    skip-cert-verify: true
+  - name: 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60417
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: yy.com
+    skip-cert-verify: true
+  - name: 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60413
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: 3699.com
+    skip-cert-verify: true
+  - name: 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60403
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: pinduoduo.com
+    skip-cert-verify: true
+  - name: 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60416
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: 58.com
+    skip-cert-verify: true
+  - name: 友连｜🇩🇪德国01｜GPT+YT｜378ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60405
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: vivo.com
+    skip-cert-verify: true
+  - name: 友连｜🇬🇧英国01｜GPT｜392ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60484
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: 58.com
+    skip-cert-verify: true
+  - name: 友连｜🇫🇷法国01｜GPT｜392ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60409
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: aiqiyi.com
+    skip-cert-verify: true
+  - name: 友连｜🇪🇸西班牙01｜GPT｜454ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60407
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: dewu.com
+    skip-cert-verify: true
+  - name: 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+    type: anytls
+    server: node01.ylgtm.com
+    port: 60489
+    password: 93e640dc-fa60-4dce-b795-ba9ed90522ca
+    udp: true
+    sni: lol.com
+    skip-cert-verify: true
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - ⚡ 最低延迟
+      - 🔯 故障转移
+      - 🇭🇰香港 自动
+      - 🇹🇼台湾 自动
+      - 🇯🇵日本 自动
+      - 🇸🇬新加坡 自动
+      - 🇺🇸美国 自动
+      - 🇰🇷韩国 自动
+      - 🇬🇧英国 自动
+      - 🇩🇪德国 自动
+      - 🇳🇱荷兰 自动
+      - 🇫🇷法国 自动
+      - 🇹🇷土耳其 自动
+      - 🇪🇬埃及 自动
+      - 🇹🇭泰国 自动
+      - 🇮🇳印度 自动
+      - 🇳🇿新西兰 自动
+      - 🇨🇱智利 自动
+      - 🇵🇱波兰 自动
+      - 🇲🇽墨西哥 自动
+      - 🇨🇭瑞士 自动
+      - 🇵🇭菲律宾 自动
+      - 🇪🇸西班牙 自动
+      - 🇮🇪爱尔兰 自动
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+      - DIRECT
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+  - name: ⚡ 最低延迟
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 20
+    proxies:
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+  - name: 🔯 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    proxies:
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+  - name: 🇭🇰香港 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+  - name: 🇹🇼台湾 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+  - name: 🇯🇵日本 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+  - name: 🇸🇬新加坡 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+  - name: 🇺🇸美国 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+  - name: 🇰🇷韩国 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+  - name: 🇬🇧英国 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+  - name: 🇩🇪德国 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+  - name: 🇳🇱荷兰 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+  - name: 🇫🇷法国 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+  - name: 🇹🇷土耳其 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+  - name: 🇪🇬埃及 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+  - name: 🇹🇭泰国 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+  - name: 🇮🇳印度 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+  - name: 🇳🇿新西兰 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+  - name: 🇨🇱智利 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+  - name: 🇵🇱波兰 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+  - name: 🇲🇽墨西哥 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+  - name: 🇨🇭瑞士 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+  - name: 🇵🇭菲律宾 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+  - name: 🇪🇸西班牙 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+  - name: 🇮🇪爱尔兰 自动
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 30
+    proxies:
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+  - name: 🎬 流媒体
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+      - DIRECT
+  - name: 🤖 AI服务
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+      - DIRECT
+  - name: 📺 YouTube
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+      - 山水云｜🇸🇬新加坡01｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡02｜GPT+YT｜64ms
+      - 山水云｜🇸🇬新加坡03｜GPT+YT｜64ms
+      - 山水云｜🇭🇰香港01｜GPT+YT｜98ms
+      - 山水云｜🇭🇰香港02｜YT｜96ms
+      - 星梦｜🇭🇰香港01｜YT｜100ms
+      - 山水云｜🇭🇰香港03｜YT｜97ms
+      - 山水云｜🇹🇼台湾01｜GPT+YT｜127ms
+      - 山水云｜🇹🇼台湾02｜GPT+YT｜130ms
+      - 山水云｜🇹🇼台湾03｜GPT｜127ms
+      - 山水云｜🇯🇵日本01｜GPT+YT｜142ms
+      - 山水云｜🇯🇵日本02｜GPT+YT｜132ms
+      - 山水云｜🇯🇵日本03｜GPT+YT｜133ms
+      - 友连｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇹🇼台湾01｜GPT+YT｜173ms
+      - 友连｜🇯🇵日本02｜GPT+YT｜189ms
+      - 友连｜🇯🇵日本03｜GPT+YT｜175ms
+      - 星梦｜🇯🇵日本01｜GPT+YT｜181ms
+      - 星梦｜🇯🇵日本02｜GPT+YT｜166ms
+      - 星梦｜🇹🇼台湾02｜GPT+YT｜149ms
+      - 友连｜🇭🇰香港01｜YT｜184ms
+      - 友连｜🇭🇰香港02｜YT｜193ms
+      - 友连｜🇭🇰香港03｜YT｜206ms
+      - 友连｜🇺🇸美国01｜NF+GPT+YT｜299ms
+      - 友连｜🇹🇼台湾01｜GPT+YT｜214ms
+      - 友连｜🇹🇼台湾02｜GPT+YT｜222ms
+      - 友连｜🇹🇼台湾03｜GPT+YT｜219ms
+      - 渔云｜🇭🇰香港01｜GPT+YT｜108ms
+      - 友连｜🇸🇬新加坡01｜GPT+YT｜221ms
+      - 友连｜🇺🇸美国02｜NF+GPT+YT｜303ms
+      - 星梦｜🇹🇼台湾03｜GPT+YT｜182ms
+      - 友连｜🇸🇬新加坡02｜GPT+YT｜218ms
+      - 极速｜🇺🇸美国01｜GPT+YT｜253ms
+      - 极速｜🇺🇸美国02｜GPT+YT｜253ms
+      - 友连｜🇸🇬新加坡03｜GPT+YT｜251ms
+      - 极速｜🇺🇸美国03｜GPT｜249ms
+      - MUA｜🇹🇷土耳其01｜GPT+YT｜266ms
+      - 渔云｜🇹🇼台湾01｜GPT+YT｜133ms
+      - 渔云｜🇯🇵日本01｜GPT+YT｜137ms
+      - 山水云｜🇺🇸美国01｜NF+GPT+YT｜235ms
+      - 友连｜🇺🇸美国03｜NF+GPT+YT｜311ms
+      - 山水云｜🇺🇸美国02｜NF+GPT+YT｜241ms
+      - 友连｜🇪🇬埃及01｜GPT+YT｜258ms
+      - 山水云｜🇺🇸美国03｜NF+GPT+YT｜232ms
+      - 友连｜🇹🇭泰国01｜GPT+YT｜267ms
+      - 渔云｜🇺🇸美国01｜NF+GPT+YT｜233ms
+      - 极速｜🇹🇼台湾01｜GPT+YT｜148ms
+      - 友连｜🇰🇷韩国01｜GPT+YT｜249ms
+      - 友连｜🇹🇷土耳其01｜GPT+YT｜413ms
+      - 友连｜🇮🇳印度01｜GPT｜415ms
+      - 友连｜🇳🇱荷兰01｜GPT+YT｜400ms
+      - 友连｜🇳🇿新西兰01｜GPT+YT｜391ms
+      - 友连｜🇨🇱智利01｜GPT+YT｜464ms
+      - 友连｜🇵🇱波兰01｜GPT+YT｜432ms
+      - 友连｜🇲🇽墨西哥01｜GPT+YT｜358ms
+      - 友连｜🇨🇭瑞士01｜GPT+YT｜438ms
+      - 友连｜🇵🇭菲律宾01｜GPT+YT｜319ms
+      - 友连｜🇩🇪德国01｜GPT+YT｜378ms
+      - 友连｜🇬🇧英国01｜GPT｜392ms
+      - 友连｜🇫🇷法国01｜GPT｜392ms
+      - 友连｜🇪🇸西班牙01｜GPT｜454ms
+      - 友连｜🇮🇪爱尔兰01｜GPT+YT｜441ms
+      - DIRECT
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+rules:
+  - DOMAIN-SUFFIX,openai.com,🤖 AI服务
+  - DOMAIN-SUFFIX,chatgpt.com,🤖 AI服务
+  - DOMAIN-SUFFIX,anthropic.com,🤖 AI服务
+  - DOMAIN-SUFFIX,claude.ai,🤖 AI服务
+  - DOMAIN-SUFFIX,gemini.google.com,🤖 AI服务
+  - DOMAIN-SUFFIX,netflix.com,🎬 流媒体
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 流媒体
+  - DOMAIN-SUFFIX,disneyplus.com,🎬 流媒体
+  - DOMAIN-SUFFIX,hbomax.com,🎬 流媒体
+  - DOMAIN-SUFFIX,primevideo.com,🎬 流媒体
+  - DOMAIN-SUFFIX,youtube.com,📺 YouTube
+  - DOMAIN-SUFFIX,googlevideo.com,📺 YouTube
+  - DOMAIN-SUFFIX,ytimg.com,📺 YouTube
+  - DOMAIN-SUFFIX,github.com,🚀 节点选择
+  - DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
+  - DOMAIN-SUFFIX,telegram.org,🚀 节点选择
+  - DOMAIN-SUFFIX,t.me,🚀 节点选择
+  - DOMAIN-SUFFIX,twitter.com,🚀 节点选择
+  - DOMAIN-SUFFIX,x.com,🚀 节点选择
+  - DOMAIN-SUFFIX,google.com,🚀 节点选择
+  - DOMAIN-SUFFIX,googleapis.com,🚀 节点选择
+  - DOMAIN-SUFFIX,gstatic.com,🚀 节点选择
+  - DOMAIN-KEYWORD,google,🚀 节点选择
+  - DOMAIN-SUFFIX,doubleclick.net,🛑 广告拦截
+  - DOMAIN-SUFFIX,googlesyndication.com,🛑 广告拦截
+  - DOMAIN-SUFFIX,googleadservices.com,🛑 广告拦截
+  - DOMAIN-SUFFIX,adservice.google.com,🛑 广告拦截
+  - DOMAIN-SUFFIX,cn,🎯 全球直连
+  - DOMAIN-SUFFIX,baidu.com,🎯 全球直连
+  - DOMAIN-SUFFIX,qq.com,🎯 全球直连
+  - DOMAIN-SUFFIX,taobao.com,🎯 全球直连
+  - DOMAIN-SUFFIX,jd.com,🎯 全球直连
+  - DOMAIN-SUFFIX,bilibili.com,🎯 全球直连
+  - DOMAIN-SUFFIX,zhihu.com,🎯 全球直连
+  - DOMAIN-SUFFIX,alipay.com,🎯 全球直连
+  - DOMAIN-SUFFIX,weixin.qq.com,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
