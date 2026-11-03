@@ -1,13 +1,4 @@
 proxies:
-  - name: 🇭🇰 香港01 境外中转
-    server: a6.mhlnf.cn
-    port: 41391
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
   - name: 🇭🇰 hk_香港2
     type: vless
     server: fsjp13.46852.top
@@ -46,7 +37,7 @@ proxies:
     network: tcp
   - name: 🇹🇭泰国
     type: vless
-    server: 54.255.46.90
+    server: 47.129.50.115
     port: 28793
     uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
     alterId: 0
@@ -170,18 +161,6 @@ proxies:
       short-id: '61'
     client-fingerprint: ios
     network: tcp
-  - name: 直连 日本 06 | 0.5x
-    type: anytls
-    server: 153.126.195.86
-    port: 8443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
   - name: 直连 香港 02 | 0.5x
     type: anytls
     server: 154.203.244.4
@@ -194,15 +173,6 @@ proxies:
       - http/1.1
     sni: swdownload.apple.com
     skip-cert-verify: true
-  - name: 🇸🇬 新加坡01 境外中转
-    server: a6.mhlnf.cn
-    port: 65472
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
   - name: 🇹🇼 tw_台湾3
     type: vless
     server: fsjp13.46852.top
@@ -239,15 +209,6 @@ proxies:
       short-id: de4ff5bf6a196b
     client-fingerprint: ios
     network: tcp
-  - name: 🇸🇬 新加坡直连
-    server: 141.11.43.220
-    port: 443
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
   - name: 🇸🇬 SG🍉新加坡1
     type: vless
     server: fsjp13.46852.top
@@ -266,20 +227,6 @@ proxies:
       short-id: 6563d4
     client-fingerprint: ios
     network: tcp
-  - name: 隧道 香港 01 | 1x
-    type: ss
-    server: net-a-b.slownetcncu.com
-    port: 44800
-    cipher: 2022-blake3-aes-256-gcm
-    password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
-    udp: true
-  - name: 隧道 香港 03 | 1x
-    type: ss
-    server: net-a-b.slownetcncu.com
-    port: 44802
-    cipher: 2022-blake3-aes-256-gcm
-    password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
-    udp: true
   - name: 直连 台湾 05 | 0.5x
     server: k5.gslb.71edge.work
     port: 8843
@@ -288,27 +235,9 @@ proxies:
     sni: updates.cdn-apple.com
     type: hysteria2
     password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-  - name: 🇦🇪阿联酋-迪拜
-    type: vless
-    server: 54.255.46.90
-    port: 30814
-    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: true
-    servername: www.tue.nl
-    reality-opts:
-      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
-      short-id: 35e0273c5d256abb
-    client-fingerprint: chrome
-    network: tcp
   - name: 🇨🇳 台湾01
     type: vless
-    server: 54.255.46.90
+    server: 52.221.242.217
     port: 26389
     uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
     alterId: 0
@@ -335,7 +264,7 @@ proxies:
     password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
   - name: 🇭🇰香港01
     type: vless
-    server: 54.255.46.90
+    server: 52.221.242.217
     port: 50284
     uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
     alterId: 0
@@ -351,42 +280,6 @@ proxies:
       short-id: 35e0273c5d256abb
     client-fingerprint: chrome
     network: tcp
-  - name: 🇯🇵 日本01
-    type: vless
-    server: 54.255.46.90
-    port: 54005
-    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-    alterId: 0
-    cipher: auto
-    udp: true
-    flow: xtls-rprx-vision
-    encryption: none
-    tls: true
-    skip-cert-verify: true
-    servername: www.tue.nl
-    reality-opts:
-      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
-      short-id: 35e0273c5d256abb
-    client-fingerprint: chrome
-    network: tcp
-  - name: 🇯🇵 日本01 境外中转
-    server: a6.mhlnf.cn
-    port: 43751
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
-  - name: 🇯🇵 日本直连
-    server: 23.146.72.207
-    port: 443
-    sni: www.bing.com
-    up: 10000
-    down: 10000
-    skip-cert-verify: true
-    type: hysteria2
-    password: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
   - name: 🇯🇵 JP🍉日本1
     type: vless
     server: fsjp13.46852.top
@@ -425,7 +318,7 @@ proxies:
     network: tcp
   - name: 🇵🇭菲律宾
     type: vless
-    server: 54.255.46.90
+    server: 47.129.50.115
     port: 15791
     uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
     alterId: 0
@@ -443,7 +336,7 @@ proxies:
     network: tcp
   - name: 🇸🇬 新加坡01
     type: vless
-    server: 54.255.46.90
+    server: 52.221.242.217
     port: 48312
     uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
     alterId: 0
@@ -495,20 +388,6 @@ proxies:
       short-id: dbedba6b2e
     client-fingerprint: ios
     network: tcp
-  - name: 🇹🇼台湾｜推特专线
-    type: vless
-    server: c8217-b2a.h1.49d2.5e11.613.b297.djjsvip.cfd
-    port: 8443
-    uuid: ff92f8cf-f6d6-40fa-8ed4-04a00da924cf
-    udp: true
-    tls: true
-    skip-cert-verify: false
-    flow: xtls-rprx-vision
-    client-fingerprint: edge
-    servername: cdn-dynmedia-1.microsoft.com
-    reality-opts:
-      public-key: hqLKHFfHt56-wcQXaPlG4vyrBNHX6Ew3glLkj0X2Cxo
-      short-id: a59821e9c2004f5d
   - name: 隧道 台湾 03 | 1x
     type: ss
     server: net-b-b.slownetcncu.com
@@ -516,32 +395,6 @@ proxies:
     cipher: 2022-blake3-aes-256-gcm
     password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
     udp: true
-  - name: 隧道 台湾 04 | 1x
-    type: ss
-    server: net-b-b.slownetcncu.com
-    port: 44903
-    cipher: 2022-blake3-aes-256-gcm
-    password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
-    udp: true
-  - name: 隧道 香港 04 | 1x
-    type: ss
-    server: net-a-b.slownetcncu.com
-    port: 44803
-    cipher: 2022-blake3-aes-256-gcm
-    password: ZTNhZTkwYjhlZjkwNWE1MTBlNjU5MzlkYzgzNjg0MDM=:YjNlMTAyNzAtYmQ2Yy00ZjM4LTk0NDMtNjdiZGFiYzc=
-    udp: true
-  - name: 直连 日本 05 | 0.5x
-    type: anytls
-    server: 153.120.7.27
-    port: 8443
-    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
-    client-fingerprint: chrome
-    udp: true
-    alpn:
-      - h2
-      - http/1.1
-    sni: swdownload.apple.com
-    skip-cert-verify: true
   - name: 直连 台湾 06 | 0.5x
     type: anytls
     server: k1.gslb.71edge.work
@@ -566,3 +419,248 @@ proxies:
       - http/1.1
     sni: swdownload.apple.com
     skip-cert-verify: true
+  - name: 🇨🇳 台湾02
+    type: vless
+    server: 47.129.50.115
+    port: 26389
+    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: true
+    servername: www.tue.nl
+    reality-opts:
+      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
+      short-id: 35e0273c5d256abb
+    client-fingerprint: chrome
+    network: tcp
+  - name: 🇭🇰 hk_香港5
+    type: vless
+    server: fsjp13.46852.top
+    port: 50208
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: zbwdDLc2MWbjHBwjpIN27aK7nU-aBCd24KKJzCIGQGQ
+      short-id: 59b117bf
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇭🇰香港02
+    type: vless
+    server: 47.129.50.115
+    port: 50284
+    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: true
+    servername: www.tue.nl
+    reality-opts:
+      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
+      short-id: 35e0273c5d256abb
+    client-fingerprint: chrome
+    network: tcp
+  - name: 🇯🇵 JP🍉日本2
+    type: vless
+    server: fsjp13.46852.top
+    port: 26068
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: NfJ_DB6hlYwBuVxBddaTP-BLRBls2ZPczyus6AvuBzs
+      short-id: d7118f
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇯🇵 JP🍓日本6
+    type: vless
+    server: fsjp13.46852.top
+    port: 25016
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: 5CaWYQBb1PDUEpwhwNEupamej9QxmeKLhT8nirevZnA
+      short-id: 815cfcc5427b886a
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇸🇬 新加坡02
+    type: vless
+    server: 47.129.50.115
+    port: 48312
+    uuid: 32bbb4b3-84be-11ef-bb6b-bc241111d95d
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: true
+    servername: www.tue.nl
+    reality-opts:
+      public-key: cv23j5RQKJBa72H9O_Ui-yWvKJ5TeSf08gmqIYJ2JG0
+      short-id: 35e0273c5d256abb
+    client-fingerprint: chrome
+    network: tcp
+  - name: 🇸🇬 SG🍉新加坡2
+    type: vless
+    server: fsjp13.46852.top
+    port: 26064
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: H5CGm4KFN1QNml0BeWSh6A7Tmqw9fQHtd_PTYxcY1Qo
+      short-id: 74e002cc019a57c6
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇸🇬 SG🍉新加坡3
+    type: vless
+    server: fsjp13.46852.top
+    port: 26065
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: LTgGWJtgO7THo1dbITvFbnttTcJM3_QRQfA4zZ63rWE
+      short-id: c4b62336f533
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇸🇬 SG🍓新加坡5
+    type: vless
+    server: fsjp13.46852.top
+    port: 25020
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: t5r_xMFsIL77-QrAeezazh_ZoXF_SkN5zrwRJNkIfRc
+      short-id: 47cc
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇸🇬 SG🍓新加坡6
+    type: vless
+    server: fsjp13.46852.top
+    port: 25021
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: _HwKZ-3Ht5RLzvphVA0VQqiNhk7y-I-4pzPVaPYIlWU
+      short-id: 335889d0
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇹🇼 tw_台湾1
+    type: vless
+    server: fsjp13.46852.top
+    port: 11142
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: 9XTaxKbgRQv_Lm888cYOBeaJiwcN9L9ccR7cTjNk2h0
+      short-id: 288d726d07c6
+    client-fingerprint: ios
+    network: tcp
+  - name: 🇹🇼 tw_台湾5
+    type: vless
+    server: fsjp13.46852.top
+    port: 11150
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: cloudflare.com
+    reality-opts:
+      public-key: mGm34gsQz4MSu6NKr3qgC3QYZIyAjzJiqtGe0dQ8iXo
+      short-id: '6491'
+    client-fingerprint: ios
+    network: tcp
+  - name: 备用香港1
+    type: vless
+    server: unamecf3.xn--ghqu5fm27b67w.com
+    port: 443
+    uuid: f244eeac-5cfe-4350-8b57-63519ad5d8af
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: null
+    encryption: none
+    tls: true
+    skip-cert-verify: false
+    servername: sshk.1028cfym.shop
+    ech-opts:
+      enable: true
+    client-fingerprint: firefox
+    network: ws
+    ws-opts:
+      path: /cf/sshk1
+      headers:
+        Host: sshk.1028cfym.shop
+  - name: 直连 台湾 04 | 0.5x
+    server: k4.gslb.71edge.work
+    port: 8843
+    udp: true
+    skip-cert-verify: true
+    sni: updates.cdn-apple.com
+    type: hysteria2
+    password: b3e10270-bd6c-4f38-9443-67bdabc73edd
