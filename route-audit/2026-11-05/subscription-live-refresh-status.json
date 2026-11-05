@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "attempted_at": "2026-11-05T14:44:24+00:00",
+  "result": "blocked",
+  "expected_total": 27,
+  "matched_total": 19,
+  "retained_previous": true,
+  "published": false,
+  "sources": [
+    {
+      "source": "掌中世界(1)",
+      "expected": 14,
+      "matched": 14,
+      "missing": [],
+      "ambiguous": [],
+      "invalid": [],
+      "errors": []
+    },
+    {
+      "source": "Speedy",
+      "expected": 8,
+      "matched": 0,
+      "missing": [],
+      "ambiguous": [],
+      "invalid": [],
+      "errors": [
+        "source_fetch_failed"
+      ]
+    },
+    {
+      "source": "Muacloud网络加速.yaml",
+      "expected": 3,
+      "matched": 3,
+      "missing": [],
+      "ambiguous": [],
+      "invalid": [],
+      "errors": []
+    },
+    {
+      "source": "星河 583",
+      "expected": 2,
+      "matched": 2,
+      "missing": [],
+      "ambiguous": [],
+      "invalid": [],
+      "errors": []
+    }
+  ]
+}

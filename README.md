@@ -2,7 +2,11 @@
 
 从四份原始 Clash / Mihomo YAML 订阅中，按「来源名 + 原始节点名」精确选取 27 个节点。Python + PyYAML 每次重新读取原订阅，保留节点协议配置与最新服务器信息，生成可直接导入 FlClash 的完整配置，以及仅含 `proxies` 的合集。
 
-目标代码仓库：<https://github.com/VnchowWang/test>（公开）。**公开仓库只保存程序、精确 selector、测试和文档；带密码的输出发布到 secret gist。**
+目标代码仓库：<https://github.com/VnchowWang/test>（公开）。**公开仓库只保存程序、精确 selector、测试和文档；带密码的输出设计为发布到 secret gist。**
+
+**当前部署状态（2026-11-05）**：程序和测量报告已提交，原有目录保留。当前凭据可以提交普通文件，但创建实际工作流、管理 Actions Secrets 和创建 gist 被 GitHub 以 HTTP 403 拒绝；尚未启用定时任务，也尚未取得可自动更新的订阅 URL。工作流目前位于 [`automation/update-subscription.yml`](automation/update-subscription.yml)，权限就绪后需安装到 `.github/workflows/update-subscription.yml`。可使用具备 `repo`、`workflow`、`gist` 作用域的 classic PAT 完成部署，或分别提供对应的最小权限凭据。
+
+首次实时抓取匹配到19/27：掌中世界14、Muacloud3、星河2均成功，Speedy请求失败。程序拒绝发布不完整结果；完整27条本地快照已由保存的原配置生成并通过Mihomo配置校验，快照不等于一次成功的实时刷新。
 
 ## 选择范围
 
