@@ -1,49 +1,124 @@
 {
-  "schema_version": 1,
-  "attempted_at": "2026-11-05T14:44:24+00:00",
-  "result": "blocked",
-  "expected_total": 27,
-  "matched_total": 19,
-  "retained_previous": true,
-  "published": false,
+  "checked_at": "2026-11-05T15:24:28+00:00",
+  "gist_public": false,
+  "source_mode": "live_original_subscriptions",
+  "matched_total": 27,
   "sources": [
     {
       "source": "掌中世界(1)",
       "expected": 14,
-      "matched": 14,
-      "missing": [],
-      "ambiguous": [],
-      "invalid": [],
-      "errors": []
+      "matched": 14
     },
     {
       "source": "Speedy",
       "expected": 8,
-      "matched": 0,
-      "missing": [],
-      "ambiguous": [],
-      "invalid": [],
-      "errors": [
-        "source_fetch_failed"
-      ]
+      "matched": 8
     },
     {
       "source": "Muacloud网络加速.yaml",
       "expected": 3,
-      "matched": 3,
-      "missing": [],
-      "ambiguous": [],
-      "invalid": [],
-      "errors": []
+      "matched": 3
     },
     {
       "source": "星河 583",
       "expected": 2,
-      "matched": 2,
-      "missing": [],
-      "ambiguous": [],
-      "invalid": [],
-      "errors": []
+      "matched": 2
     }
-  ]
+  ],
+  "publication_attempted_at": "2026-11-05T15:23:32+00:00",
+  "publication_outcome": "confirmed",
+  "raw_files": [
+    {
+      "file": "9929-flclash.yaml",
+      "http_status": 200,
+      "node_count": 27,
+      "bytes": 9461,
+      "sha256": "50a7dbb0bc4aeedaf52e9c0381116d268649ee4d23924244a9a0d8cd0c3357ba",
+      "matches_latest_gist": true
+    },
+    {
+      "file": "9929-proxies.yaml",
+      "http_status": 200,
+      "node_count": 27,
+      "bytes": 6341,
+      "sha256": "917093940b8c4cca8719209963103e508b04054bcdf53b73ee40809fc0a5f9c4",
+      "matches_latest_gist": true
+    }
+  ],
+  "deployment": "active",
+  "workflow": {
+    "run_id": 42054467635,
+    "url": "https://github.com/VnchowWang/test/actions/runs/42054467635",
+    "started_before_dispatch": "2026-11-05T15:23:17+00:00",
+    "head_sha": "da092a0e39cd6be7b75113f9bfd691e83a096112",
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-11-05T15:23:44Z",
+    "jobs": [
+      {
+        "name": "update",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Check out reviewed public code",
+            "conclusion": "success"
+          },
+          {
+            "name": "Set up Python",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install pinned dependency",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run isolated tests without source secrets",
+            "conclusion": "success"
+          },
+          {
+            "name": "Fetch exact selections and update secret gist",
+            "conclusion": "success"
+          },
+          {
+            "name": "Save credential-free update report",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Set up Python",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Check out reviewed public code",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "schedule_utc": "17 */6 * * *",
+  "schedule_timezone": "UTC",
+  "schedule_asia_shanghai": [
+    "02:17",
+    "08:17",
+    "14:17",
+    "20:17"
+  ],
+  "secrets_configured": [
+    "SOURCE_ZHANGZHONG",
+    "SOURCE_SPEEDY",
+    "SOURCE_MUACLOUD",
+    "SOURCE_XINGHE",
+    "GIST_TOKEN",
+    "GIST_ID"
+  ],
+  "subscription_links": "issued_privately_and_verified",
+  "mihomo_configuration_validation": "passed"
 }
