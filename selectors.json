@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "expected_total": 27,
+  "expected_total": 35,
   "sources": [
     {
       "id": "zhangzhong",
@@ -20,7 +20,8 @@
         "SG01🇸🇬AI优化",
         "SG02🇸🇬AI优化",
         "美国02丨Netflix",
-        "美国03丨ChatGPT"
+        "美国03丨ChatGPT",
+        "HK07🇭🇰办公日常"
       ]
     },
     {
@@ -56,6 +57,97 @@
         "[🇺🇸] 美国02 奈飞|迪士尼+ x1",
         "[🇺🇸] 美国03 奈飞|迪士尼+ x1"
       ]
+    },
+    {
+      "id": "aoyo",
+      "name": "AoYo-Cloud",
+      "url_env": "SOURCE_AOYO",
+      "nodes": [
+        "韩国M区-上港AWS①",
+        "大板B区-上港AWS①",
+        "香港C区-上港YC①"
+      ]
+    },
+    {
+      "id": "zhuiyun_vip3",
+      "name": "追云加速(1)",
+      "url_env": "SOURCE_ZHUIYUN_VIP3",
+      "nodes": [
+        "香港03【vip3】[H]"
+      ]
+    },
+    {
+      "id": "zhuiyun_vip2",
+      "name": "追云加速",
+      "url_env": "SOURCE_ZHUIYUN_VIP2",
+      "nodes": [
+        "日本01【vip2 】[H]"
+      ]
+    },
+    {
+      "id": "stardream",
+      "name": "Stardream",
+      "url_env": "SOURCE_STARDREAM",
+      "nodes": [
+        "直连 台湾 07 | 0.5x"
+      ]
+    },
+    {
+      "id": "sese",
+      "name": "色色小站",
+      "url_env": "SOURCE_SESE",
+      "nodes": [
+        "HK | ANYTLS"
+      ]
+    }
+  ],
+  "node_order": [
+    "掌中世界(1) :: HK01🇭🇰影视娱乐",
+    "掌中世界(1) :: HK02🇭🇰影视娱乐",
+    "掌中世界(1) :: HK04🇭🇰影视娱乐",
+    "掌中世界(1) :: 台湾01丨AI专线",
+    "掌中世界(1) :: 台湾02丨AI专线",
+    "掌中世界(1) :: SG01🇸🇬AI专线",
+    "掌中世界(1) :: SG02🇸🇬AI专线",
+    "掌中世界(1) :: JP03🇯🇵AI优化",
+    "掌中世界(1) :: JP04🇯🇵AI优化",
+    "掌中世界(1) :: HK06🇭🇰办公日常",
+    "掌中世界(1) :: SG01🇸🇬AI优化",
+    "掌中世界(1) :: SG02🇸🇬AI优化",
+    "掌中世界(1) :: 美国02丨Netflix",
+    "掌中世界(1) :: 美国03丨ChatGPT",
+    "Speedy :: Standard 1.5x | 美国 | B",
+    "Speedy :: Standard 1.5x | 美国 | C",
+    "Speedy :: Standard 1.5x | 英国 | A",
+    "Speedy :: Standard 1.5x | 英国 | B",
+    "Speedy :: Standard 1.5x | 英国 | C",
+    "Speedy :: Basic | 美国 | A",
+    "Speedy :: Basic | 美国 | B",
+    "Speedy :: Basic | 美国 | C",
+    "Muacloud网络加速.yaml :: 高倍率 日本 ｜穿透 02 [10x]",
+    "Muacloud网络加速.yaml :: 高倍率 台湾 ｜穿透 03 [9x]",
+    "Muacloud网络加速.yaml :: 高倍率 台湾 ｜穿透 04 [10x]",
+    "星河 583 :: [🇺🇸] 美国02 奈飞|迪士尼+ x1",
+    "星河 583 :: [🇺🇸] 美国03 奈飞|迪士尼+ x1",
+    "AoYo-Cloud :: 韩国M区-上港AWS①",
+    "AoYo-Cloud :: 大板B区-上港AWS①",
+    "追云加速(1) :: 香港03【vip3】[H]",
+    "追云加速 :: 日本01【vip2 】[H]",
+    "AoYo-Cloud :: 香港C区-上港YC①",
+    "掌中世界(1) :: HK07🇭🇰办公日常",
+    "Stardream :: 直连 台湾 07 | 0.5x",
+    "色色小站 :: HK | ANYTLS"
+  ],
+  "batches": [
+    {
+      "id": "first",
+      "name": "第一轮",
+      "count": 27
+    },
+    {
+      "id": "second",
+      "name": "第二轮日常推荐",
+      "count": 8
     }
   ]
 }

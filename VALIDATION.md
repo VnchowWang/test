@@ -1,5 +1,15 @@
 # Verification record
 
+## Combined two-round subscription — 2026-11-06
+
+- 35 exact identities across 9 original sources: original 27 first, second-round 8 below, including the added Zhangzhong node after all original sources.
+- 39 offline tests passed; ordering, protocol preservation, service routing and shared-CDN boundaries, Claude assets, Telegram native DC ranges, invalid-order rejection and publication retention are covered.
+- All 35 selected identities were found in original subscriptions fetched during this session. The resulting full configuration passed Mihomo v1.19.33 `-t` validation.
+- Full output includes 11 groups and 106 rules, fake-IP DNS and hostname sniffing; the client TUN switch is not set by the subscription.
+- Deployment schedule remains `17,47 * * * *` (every 30 minutes). Fixed Gist filenames remain unchanged. Actual online publication is verified separately in the deployment-status record.
+
+## Original initial offline verification
+
 - Python: 3.12.14 (bundled interpreter); PyYAML: 6.0.3 installed only in `.deps/`.
 - Offline unit tests: **27 passed**, 0 failures, 0 errors; final recorded run took 1.685 seconds.
 - No real source URL or node credentials were provided to these tests. All network publication requests are mocked.

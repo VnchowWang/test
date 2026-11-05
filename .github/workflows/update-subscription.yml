@@ -37,6 +37,11 @@ jobs:
           SOURCE_SPEEDY: ${{ secrets.SOURCE_SPEEDY }}
           SOURCE_MUACLOUD: ${{ secrets.SOURCE_MUACLOUD }}
           SOURCE_XINGHE: ${{ secrets.SOURCE_XINGHE }}
+          SOURCE_AOYO: ${{ secrets.SOURCE_AOYO }}
+          SOURCE_ZHUIYUN_VIP3: ${{ secrets.SOURCE_ZHUIYUN_VIP3 }}
+          SOURCE_ZHUIYUN_VIP2: ${{ secrets.SOURCE_ZHUIYUN_VIP2 }}
+          SOURCE_STARDREAM: ${{ secrets.SOURCE_STARDREAM }}
+          SOURCE_SESE: ${{ secrets.SOURCE_SESE }}
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: python subscription_bundle.py publish

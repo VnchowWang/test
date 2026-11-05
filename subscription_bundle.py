@@ -20,7 +20,78 @@ MAX_GIST_BYTES = 32 * 1024 * 1024
 PROXIES_FILE = "9929-proxies.yaml"
 CLASH_FILE = "9929-flclash.yaml"
 STATUS_FILE = "update-status.json"
-GROUP_NAMES = ("9929 手动选择", "9929 自动测速", "9929 故障转移")
+# These entry names are retained for existing clients of the original bundle.
+ENTRY_GROUP_NAMES = ("9929 手动选择", "9929 自动测速", "9929 故障转移")
+# Exact hosts on shared infrastructure use DOMAIN; service-owned namespaces use
+# DOMAIN-SUFFIX. These rules select a route; they do not imply service access.
+SERVICE_DOMAINS = {
+    "Netflix": (
+        ("DOMAIN", "netflix.com.edgesuite.net"),
+        *(("DOMAIN-SUFFIX", domain) for domain in (
+            "netflix.com", "netflix.net", "nflxext.com", "nflximg.com", "fast.com",
+            "nflximg.net", "nflxsearch.net", "nflxso.net", "nflxvideo.net")),
+    ),
+    "Disney+": (
+        *(("DOMAIN", domain) for domain in (
+            "disney.api.edge.bamgrid.com", "disney.content.edge.bamgrid.com",
+            "disney.playback.edge.bamgrid.com", "cdn.registerdisney.go.com",
+            "disneyplus.com.ssl.sc.omtrdc.net", "disney-portal.my.onetrust.com")),
+        *(("DOMAIN-SUFFIX", domain) for domain in (
+            "disneyplus.com", "disney-plus.net", "disneystreaming.com", "dssott.com",
+            "disneyaccount.com", "streamingdisney.net", "dilcdn.com")),
+    ),
+    "OpenAI": (
+        *(("DOMAIN", domain) for domain in (
+            "openaicom.imgix.net", "openaiapi-site.azureedge.net",
+            "openaiassets.blob.core.windows.net",
+            "openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+            "openaicomproductionae4b.blob.core.windows.net",
+            "production-openaicom-storage.azureedge.net")),
+        *(("DOMAIN-SUFFIX", domain) for domain in (
+            "openai.com", "chatgpt.com", "oaistatic.com", "oaiusercontent.com",
+            "oaistatsig.com", "chat.com", "sora.com", "chatgpt.livekit.cloud")),
+    ),
+    "Claude": (
+        ("DOMAIN", "servd-anthropic-website.b-cdn.net"),
+        *(("DOMAIN-SUFFIX", domain) for domain in (
+            "anthropic.com", "claude.ai", "claude.com", "claudeusercontent.com",
+            "claudemcpcontent.com", "clau.de")),
+    ),
+    "YouTube": (
+        *(("DOMAIN", domain) for domain in (
+            "youtubei.googleapis.com", "youtube.googleapis.com",
+            "youtubeembeddedplayer.googleapis.com", "yt3.ggpht.com", "yt3.googleusercontent.com")),
+        *(("DOMAIN-SUFFIX", domain) for domain in (
+            "youtube.com", "youtu.be", "youtube-nocookie.com", "googlevideo.com",
+            "ytimg.com", "yt.be", "youtubekids.com")),
+    ),
+    "Telegram": tuple(("DOMAIN-SUFFIX", domain) for domain in (
+        "telegram.org", "telegram.me", "t.me", "telegra.ph", "telesco.pe",
+        "tdesktop.com", "telegram-cdn.org", "cdn-telegram.org")),
+    "Apple": tuple(("DOMAIN-SUFFIX", domain) for domain in (
+        "apple.com", "icloud.com", "icloud-content.com", "aaplimg.com", "mzstatic.com")),
+    "Microsoft": tuple(("DOMAIN-SUFFIX", domain) for domain in (
+        "microsoft.com", "microsoftonline.com", "live.com", "office.com",
+        "office365.com", "onedrive.com", "1drv.com")),
+}
+# Telegram native clients also connect to literal, service-specific DC addresses.
+# Source: MetaCubeX/meta-rules-dat meta/geo/geoip/telegram.list, reviewed 2026-11-06.
+TELEGRAM_IP_RULES = (
+    *(f"IP-CIDR,{network},Telegram,no-resolve" for network in (
+        "91.105.192.0/23", "91.108.4.0/22", "91.108.8.0/21", "91.108.16.0/21",
+        "91.108.56.0/22", "95.161.64.0/20", "149.154.160.0/20", "185.76.151.0/24")),
+    *(f"IP-CIDR6,{network},Telegram,no-resolve" for network in (
+        "2001:67c:4e8::/48", "2001:b28:f23c::/47", "2001:b28:f23f::/48", "2a0a:f280::/32")),
+)
+GROUP_NAMES = (*ENTRY_GROUP_NAMES, *SERVICE_DOMAINS)
+LAN_RULES = (
+    "DOMAIN,localhost,DIRECT", "DOMAIN-SUFFIX,local,DIRECT", "DOMAIN-SUFFIX,lan,DIRECT",
+    *(f"IP-CIDR,{network},DIRECT,no-resolve" for network in (
+        "0.0.0.0/8", "10.0.0.0/8", "100.64.0.0/10", "127.0.0.0/8",
+        "169.254.0.0/16", "172.16.0.0/12", "192.168.0.0/16", "224.0.0.0/4", "240.0.0.0/4")),
+    *(f"IP-CIDR6,{network},DIRECT,no-resolve" for network in (
+        "::1/128", "fc00::/7", "fe80::/10", "ff00::/8")),
+)
 GIST_API = "https://api.github.com/gists"
 
 
@@ -64,6 +135,11 @@ def load_selectors(path: Path) -> dict:
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         raise BundleError("invalid_selectors") from None
+    return validate_selectors(data)
+
+
+def validate_selectors(data: dict) -> dict:
+    """Validate v1 selectors, including an optional exact global output order."""
     if not isinstance(data, dict) or data.get("version") != 1:
         raise BundleError("invalid_selectors")
     sources = data.get("sources")
@@ -98,8 +174,14 @@ def load_selectors(path: Path) -> dict:
                 raise BundleError("invalid_selectors")
             seen_output_names.add(output_name)
         count += len(nodes)
-    if data.get("expected_total") != count:
+    if type(data.get("expected_total")) is not int or data["expected_total"] != count:
         raise BundleError("invalid_selectors")
+    if "node_order" in data:
+        order = data["node_order"]
+        if (not isinstance(order, list) or len(order) != count
+                or any(not isinstance(name, str) or not name for name in order)
+                or len(set(order)) != count or set(order) != seen_output_names):
+            raise BundleError("invalid_selectors")
     return data
 
 
@@ -195,15 +277,38 @@ def build_config(proxies: list[dict]) -> dict:
         "mode": "rule",
         "log-level": "warning",
         "ipv6": False,
+        "dns": {
+            "enable": True, "listen": "127.0.0.1:1053", "ipv6": False,
+            "enhanced-mode": "fake-ip", "fake-ip-range": "198.18.0.1/16",
+            "fake-ip-filter": ["*.lan", "*.local", "localhost"],
+            "default-nameserver": ["223.5.5.5", "119.29.29.29"],
+            "nameserver": ["https://dns.alidns.com/dns-query", "https://doh.pub/dns-query"],
+            "proxy-server-nameserver": ["https://dns.alidns.com/dns-query", "https://doh.pub/dns-query"],
+        },
+        "sniffer": {
+            "enable": True, "force-dns-mapping": True, "parse-pure-ip": True,
+            "override-destination": False,
+            "sniff": {"HTTP": {"ports": [80, 8080]}, "TLS": {"ports": [443, 8443]},
+                      "QUIC": {"ports": [443, 8443]}},
+        },
         "proxies": copy.deepcopy(proxies),
         "proxy-groups": [
             {"name": GROUP_NAMES[0], "type": "select", "proxies": [GROUP_NAMES[1], GROUP_NAMES[2], *names]},
-            {"name": GROUP_NAMES[1], "type": "url-test", "proxies": names,
+            {"name": GROUP_NAMES[1], "type": "url-test", "proxies": list(names),
              "url": "https://www.gstatic.com/generate_204", "interval": 600, "tolerance": 100, "lazy": True},
-            {"name": GROUP_NAMES[2], "type": "fallback", "proxies": names,
+            {"name": GROUP_NAMES[2], "type": "fallback", "proxies": list(names),
              "url": "https://www.gstatic.com/generate_204", "interval": 600, "lazy": True},
+            *({"name": service, "type": "select", "proxies": [*ENTRY_GROUP_NAMES, *names]}
+              for service in SERVICE_DOMAINS),
         ],
-        "rules": [f"MATCH,{GROUP_NAMES[0]}"],
+        "rules": [
+            *(f"{kind},{domain},{service}" for service, domains in SERVICE_DOMAINS.items()
+              for kind, domain in domains),
+            *TELEGRAM_IP_RULES,
+            *LAN_RULES,
+            "GEOIP,CN,DIRECT",
+            f"MATCH,{GROUP_NAMES[0]}",
+        ],
     }
 
 
@@ -211,8 +316,13 @@ def build_bundle(selectors: dict, environ=None, fetcher=None) -> tuple[dict | No
     environ = os.environ if environ is None else environ
     fetcher = fetch_subscription if fetcher is None else fetcher
     status = {"schema_version": 1, "attempted_at": utc_now(), "result": "blocked",
-              "expected_total": selectors["expected_total"], "matched_total": 0,
-              "retained_previous": True, "published": False, "sources": []}
+              "expected_total": selectors.get("expected_total") if isinstance(selectors, dict) else None,
+              "matched_total": 0, "retained_previous": True, "published": False, "sources": []}
+    try:
+        validate_selectors(selectors)
+    except BundleError as error:
+        status["errors"] = [error.code]
+        return None, status
     all_selected = []
     for source in selectors["sources"]:
         report = {"source": source["name"], "expected": len(source["nodes"]), "matched": 0,
@@ -238,6 +348,9 @@ def build_bundle(selectors: dict, environ=None, fetcher=None) -> tuple[dict | No
     )
     if not complete:
         return None, status
+    if "node_order" in selectors:
+        by_name = {proxy["name"]: proxy for proxy in all_selected}
+        all_selected = [by_name[name] for name in selectors["node_order"]]
     # Ensure all string values round-trip safely before any output or publication.
     try:
         files = {PROXIES_FILE: encode_yaml({"proxies": all_selected}),
@@ -325,7 +438,7 @@ def publish_gist(files: dict, status: dict, token: str, gist_id: str | None, ini
 
 
 def run(argv=None) -> int:
-    parser = argparse.ArgumentParser(description="Build 27 exact AS9929 selections; never print source URLs or node credentials.")
+    parser = argparse.ArgumentParser(description="Build exact combined subscription selections; never print source URLs or node credentials.")
     parser.add_argument("command", choices=("build", "publish", "init-gist"))
     parser.add_argument("--selectors", type=Path, default=Path(__file__).with_name("selectors.json"))
     parser.add_argument("--output-dir", type=Path, default=Path(".private"))
