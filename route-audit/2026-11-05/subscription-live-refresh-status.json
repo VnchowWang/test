@@ -1,13 +1,40 @@
 {
-  "checked_at": "2026-11-05T15:24:28+00:00",
+  "checked_at": "2026-11-05T22:21:49+00:00",
   "gist_public": false,
   "source_mode": "live_original_subscriptions",
-  "matched_total": 27,
+  "matched_total": 35,
+  "batches": [
+    {
+      "id": "first",
+      "name": "第一轮",
+      "count": 27
+    },
+    {
+      "id": "second",
+      "name": "第二轮日常推荐",
+      "count": 8
+    }
+  ],
+  "node_order_verified": true,
+  "service_groups": [
+    "9929 手动选择",
+    "9929 自动测速",
+    "9929 故障转移",
+    "Netflix",
+    "Disney+",
+    "OpenAI",
+    "Claude",
+    "YouTube",
+    "Telegram",
+    "Apple",
+    "Microsoft"
+  ],
+  "rule_count": 106,
   "sources": [
     {
       "source": "掌中世界(1)",
-      "expected": 14,
-      "matched": 14
+      "expected": 15,
+      "matched": 15
     },
     {
       "source": "Speedy",
@@ -23,37 +50,62 @@
       "source": "星河 583",
       "expected": 2,
       "matched": 2
+    },
+    {
+      "source": "AoYo-Cloud",
+      "expected": 3,
+      "matched": 3
+    },
+    {
+      "source": "追云加速(1)",
+      "expected": 1,
+      "matched": 1
+    },
+    {
+      "source": "追云加速",
+      "expected": 1,
+      "matched": 1
+    },
+    {
+      "source": "Stardream",
+      "expected": 1,
+      "matched": 1
+    },
+    {
+      "source": "色色小站",
+      "expected": 1,
+      "matched": 1
     }
   ],
-  "publication_attempted_at": "2026-11-05T15:23:32+00:00",
+  "publication_attempted_at": "2026-11-05T22:20:44+00:00",
   "publication_outcome": "confirmed",
   "raw_files": [
     {
       "file": "9929-flclash.yaml",
       "http_status": 200,
-      "node_count": 27,
-      "bytes": 9461,
-      "sha256": "50a7dbb0bc4aeedaf52e9c0381116d268649ee4d23924244a9a0d8cd0c3357ba",
+      "node_count": 35,
+      "bytes": 32533,
+      "sha256": "ea1c4f00333f61a06ba49f68828a67d015cdbff3d7bf1b4cb97d8a49ec653281",
       "matches_latest_gist": true
     },
     {
       "file": "9929-proxies.yaml",
       "http_status": 200,
-      "node_count": 27,
-      "bytes": 6341,
-      "sha256": "917093940b8c4cca8719209963103e508b04054bcdf53b73ee40809fc0a5f9c4",
+      "node_count": 35,
+      "bytes": 8083,
+      "sha256": "f8e608ada37ad1211002c74bf9ea80fe8be0a635c35f43924bd385f5ea883c48",
       "matches_latest_gist": true
     }
   ],
   "deployment": "active",
   "workflow": {
-    "run_id": 42054467635,
-    "url": "https://github.com/VnchowWang/test/actions/runs/42054467635",
-    "started_before_dispatch": "2026-11-05T15:23:17+00:00",
-    "head_sha": "da092a0e39cd6be7b75113f9bfd691e83a096112",
+    "run_id": 42120663276,
+    "url": "https://github.com/VnchowWang/test/actions/runs/42120663276",
+    "started_before_dispatch": "2026-11-05T22:20:28+00:00",
+    "head_sha": "0b670d1e2032fd984e867f533fcc334299e4bf23",
     "status": "completed",
     "conclusion": "success",
-    "updated_at": "2026-11-05T15:23:44Z",
+    "updated_at": "2026-11-05T22:21:01Z",
     "jobs": [
       {
         "name": "update",
@@ -160,11 +212,16 @@
     "SOURCE_SPEEDY",
     "SOURCE_MUACLOUD",
     "SOURCE_XINGHE",
+    "SOURCE_AOYO",
+    "SOURCE_ZHUIYUN_VIP3",
+    "SOURCE_ZHUIYUN_VIP2",
+    "SOURCE_STARDREAM",
+    "SOURCE_SESE",
     "GIST_TOKEN",
     "GIST_ID"
   ],
-  "subscription_links": "issued_privately_and_verified",
-  "mihomo_configuration_validation": "passed",
   "schedule_interval_minutes": 30,
-  "schedule_updated_at": "2026-11-05T16:14:43+00:00"
+  "offline_unit_tests_passed": 39,
+  "subscription_links": "issued_privately_and_verified",
+  "mihomo_configuration_validation": "passed"
 }
