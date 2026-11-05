@@ -4,9 +4,9 @@
 
 目标代码仓库：<https://github.com/VnchowWang/test>（公开）。**公开仓库只保存程序、精确 selector、测试和文档；带密码的输出设计为发布到 secret gist。**
 
-**当前部署状态（2026-11-05）**：程序和测量报告已提交，原有目录保留。当前凭据可以提交普通文件，但创建实际工作流、管理 Actions Secrets 和创建 gist 被 GitHub 以 HTTP 403 拒绝；尚未启用定时任务，也尚未取得可自动更新的订阅 URL。工作流目前位于 [`automation/update-subscription.yml`](automation/update-subscription.yml)，权限就绪后需安装到 `.github/workflows/update-subscription.yml`。可使用具备 `repo`、`workflow`、`gist` 作用域的 classic PAT 完成部署，或分别提供对应的最小权限凭据。
+**部署状态（2026-11-05）**：四个原订阅 Secret、`GIST_TOKEN` 和 `GIST_ID` 已配置；实际工作流已安装到 [`.github/workflows/update-subscription.yml`](.github/workflows/update-subscription.yml)，每六小时更新，并支持手动运行。本机重新抓取四家原订阅，完整匹配27/27；两个固定订阅URL均返回HTTP 200，完整配置通过Mihomo校验。[首次线上运行](https://github.com/VnchowWang/test/actions/runs/42054467635)已成功，四家原订阅完整匹配27/27并发布；随后再次读取两个固定URL，均确认与这次线上发布一致。[工作流运行记录](https://github.com/VnchowWang/test/actions/workflows/update-subscription.yml)和[部署验证记录](route-audit/2026-11-05/subscription-live-refresh-status.json)可用于后续核对。真实订阅URL不写入公开仓库。
 
-首次实时抓取匹配到19/27：掌中世界14、Muacloud3、星河2均成功，Speedy请求失败。程序拒绝发布不完整结果；完整27条本地快照已由保存的原配置生成并通过Mihomo配置校验，快照不等于一次成功的实时刷新。
+自动更新必须从全部四份原订阅完整找到这27个精确身份；任一来源失败时，保留上一次完整订阅。
 
 ## 选择范围
 
@@ -69,7 +69,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe subscription_bundle.py build
 ```
 
-首次创建需另外注入 `GIST_TOKEN`，且不设置 `GIST_ID`。推荐使用仅有 `gist` scope 的 classic PAT；默认 `GITHUB_TOKEN` 不能代替这个独立令牌。执行：
+首次创建需另外注入 `GIST_TOKEN`，且不设置 `GIST_ID`。令牌可使用具有账户级 **Gists: Write** 权限的细粒度 PAT，或具有 `gist` 作用域的 classic PAT；默认 `GITHUB_TOKEN` 不能代替这个令牌。执行：
 
 ```powershell
 .\.venv\Scripts\python.exe subscription_bundle.py init-gist
@@ -89,7 +89,7 @@ python -m venv .venv
 
 ## GitHub Actions 部署
 
-部署需要仓库代码及工作流写入权限、Actions Secrets 读写权限，以及用于 secret gist 的独立令牌。本次替换后的 GitHub 凭据已通过认证，仓库代码可写；但 Secrets 公钥读取与 gist 创建均被 GitHub 以 HTTP 403 拒绝。代码和测量结果可以上传，自动发布仍需补齐这些权限。
+部署需要仓库级 **Contents: Read and write、Workflows: Write、Secrets: Read and write、Actions: Read and write**，以及账户级 **Gists: Write**。现有细粒度令牌已通过 Secrets 写入、工作流上传和 secret gist 创建验证；凭据保留在 GitHub CLI 登录及仓库 Secrets 中，未写入公开代码。
 
 部署前先使用有效访问方式检查目标仓库当前结构，再把以下文件合并进去：`subscription_bundle.py`、`selectors.json`、`requirements.txt`、`tests/test_subscription_bundle.py`、`.github/workflows/update-subscription.yml`，以及适合合并的 README / `.gitignore`。不要直接覆盖已有同名文件。只暂存这些已审阅的源文件；不要暂存 `.private/`、`.deps/`、`.pip-cache/` 或任何真实节点输出。
 
@@ -101,7 +101,7 @@ python -m venv .venv
 | `SOURCE_SPEEDY` | Speedy 原始 Clash YAML 订阅 URL |
 | `SOURCE_MUACLOUD` | Muacloud 原始 Clash YAML 订阅 URL |
 | `SOURCE_XINGHE` | 星河 583 原始 Clash YAML 订阅 URL |
-| `GIST_TOKEN` | 可修改目标 secret gist、仅需 `gist` scope 的令牌 |
+| `GIST_TOKEN` | 具有账户级 `Gists: Write` 权限的细粒度PAT，或具有 `gist` 作用域的令牌 |
 | `GIST_ID` | 已创建的 secret gist ID |
 
 Actions 每六小时第 17 分钟（UTC）执行一次，并支持 **Actions → Update selected 9929 subscription → Run workflow** 手动触发。仓库权限只有 `contents: read`；不执行 git commit / push。所有 Actions 均固定到具体提交 SHA；源 URL 和 gist 令牌仅注入最后的发布步骤，离线测试没有 Secrets。并发更新串行，避免同一工作流互相覆盖。
