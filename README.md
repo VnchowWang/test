@@ -4,7 +4,7 @@
 
 目标代码仓库：<https://github.com/VnchowWang/test>（公开）。**公开仓库只保存程序、精确 selector、测试和文档；带密码的输出设计为发布到 secret gist。**
 
-**部署状态（2026-11-05）**：四个原订阅 Secret、`GIST_TOKEN` 和 `GIST_ID` 已配置；实际工作流已安装到 [`.github/workflows/update-subscription.yml`](.github/workflows/update-subscription.yml)，每六小时更新，并支持手动运行。本机重新抓取四家原订阅，完整匹配27/27；两个固定订阅URL均返回HTTP 200，完整配置通过Mihomo校验。[首次线上运行](https://github.com/VnchowWang/test/actions/runs/42054467635)已成功，四家原订阅完整匹配27/27并发布；随后再次读取两个固定URL，均确认与这次线上发布一致。[工作流运行记录](https://github.com/VnchowWang/test/actions/workflows/update-subscription.yml)和[部署验证记录](route-audit/2026-11-05/subscription-live-refresh-status.json)可用于后续核对。真实订阅URL不写入公开仓库。
+**部署状态（2026-11-06）**：四个原订阅 Secret、`GIST_TOKEN` 和 `GIST_ID` 已配置；实际工作流已安装到 [`.github/workflows/update-subscription.yml`](.github/workflows/update-subscription.yml)，每30分钟更新，并支持手动运行。本机重新抓取四家原订阅，完整匹配27/27；两个固定订阅URL均返回HTTP 200，完整配置通过Mihomo校验。[首次线上运行](https://github.com/VnchowWang/test/actions/runs/42054467635)已成功，四家原订阅完整匹配27/27并发布；随后再次读取两个固定URL，均确认与这次线上发布一致。[工作流运行记录](https://github.com/VnchowWang/test/actions/workflows/update-subscription.yml)和[部署验证记录](route-audit/2026-11-05/subscription-live-refresh-status.json)可用于后续核对。真实订阅URL不写入公开仓库。
 
 自动更新必须从全部四份原订阅完整找到这27个精确身份；任一来源失败时，保留上一次完整订阅。
 
@@ -104,7 +104,7 @@ python -m venv .venv
 | `GIST_TOKEN` | 具有账户级 `Gists: Write` 权限的细粒度PAT，或具有 `gist` 作用域的令牌 |
 | `GIST_ID` | 已创建的 secret gist ID |
 
-Actions 每六小时第 17 分钟（UTC）执行一次，并支持 **Actions → Update selected 9929 subscription → Run workflow** 手动触发。仓库权限只有 `contents: read`；不执行 git commit / push。所有 Actions 均固定到具体提交 SHA；源 URL 和 gist 令牌仅注入最后的发布步骤，离线测试没有 Secrets。并发更新串行，避免同一工作流互相覆盖。
+Actions 每30分钟执行一次，cron为 `17,47 * * * *`，即每小时第17和47分钟（UTC和北京时间分钟数相同）；并支持 **Actions → Update selected 9929 subscription → Run workflow** 手动触发。仓库权限只有 `contents: read`；不执行 git commit / push。所有 Actions 均固定到具体提交 SHA；源 URL 和 gist 令牌仅注入最后的发布步骤，离线测试没有 Secrets。并发更新串行，避免同一工作流互相覆盖。
 
 公开 Actions 日志仅输出匹配计数/结果。唯一上传产物是已净化的 `update-status.json`（保留七天），不上传配置、完整私密目录或链接。工作流因丢失节点而失败时，在状态产物查看 `sources[].missing`、`ambiguous`、`invalid` 或 `errors`。核实改名或线路变化后，再审阅并修改 selector；不要为了让任务变绿而替换成别的节点。
 

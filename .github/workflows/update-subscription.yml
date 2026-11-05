@@ -2,8 +2,8 @@ name: Update selected 9929 subscription
 
 on:
   schedule:
-    # UTC: every six hours, at minute 17.
-    - cron: '17 */6 * * *'
+    # UTC: every 30 minutes, at minutes 17 and 47.
+    - cron: '17,47 * * * *'
   workflow_dispatch:
 
 # The repository is read-only; only the separate GIST_TOKEN can update the secret gist.
