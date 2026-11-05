@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "expected_total": 27,
+  "sources": [
+    {
+      "id": "zhangzhong",
+      "name": "掌中世界(1)",
+      "url_env": "SOURCE_ZHANGZHONG",
+      "nodes": [
+        "HK01🇭🇰影视娱乐",
+        "HK02🇭🇰影视娱乐",
+        "HK04🇭🇰影视娱乐",
+        "台湾01丨AI专线",
+        "台湾02丨AI专线",
+        "SG01🇸🇬AI专线",
+        "SG02🇸🇬AI专线",
+        "JP03🇯🇵AI优化",
+        "JP04🇯🇵AI优化",
+        "HK06🇭🇰办公日常",
+        "SG01🇸🇬AI优化",
+        "SG02🇸🇬AI优化",
+        "美国02丨Netflix",
+        "美国03丨ChatGPT"
+      ]
+    },
+    {
+      "id": "speedy",
+      "name": "Speedy",
+      "url_env": "SOURCE_SPEEDY",
+      "nodes": [
+        "Standard 1.5x | 美国 | B",
+        "Standard 1.5x | 美国 | C",
+        "Standard 1.5x | 英国 | A",
+        "Standard 1.5x | 英国 | B",
+        "Standard 1.5x | 英国 | C",
+        "Basic | 美国 | A",
+        "Basic | 美国 | B",
+        "Basic | 美国 | C"
+      ]
+    },
+    {
+      "id": "muacloud",
+      "name": "Muacloud网络加速.yaml",
+      "url_env": "SOURCE_MUACLOUD",
+      "nodes": [
+        "高倍率 日本 ｜穿透 02 [10x]",
+        "高倍率 台湾 ｜穿透 03 [9x]",
+        "高倍率 台湾 ｜穿透 04 [10x]"
+      ]
+    },
+    {
+      "id": "xinghe",
+      "name": "星河 583",
+      "url_env": "SOURCE_XINGHE",
+      "nodes": [
+        "[🇺🇸] 美国02 奈飞|迪士尼+ x1",
+        "[🇺🇸] 美国03 奈飞|迪士尼+ x1"
+      ]
+    }
+  ]
+}

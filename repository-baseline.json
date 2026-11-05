@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/VnchowWang/test",
+  "inspection": "Read-only public GitHub recursive tree API; no existing subscription file contents were read.",
+  "observed_head": "2d240290af5df1abce6f2541dafa3aa2cb41eebf",
+  "tree_truncated": false,
+  "source": "https://api.github.com/repos/VnchowWang/test/git/trees/HEAD?recursive=1",
+  "files": [
+    {"path": "proxy-sub/README.md", "sha": "3096575a2eb64e7153a1e6ab7332d5eca49904c0", "size": 14390},
+    {"path": "proxy-sub/base64.txt", "sha": "40015b7ee8723d8ce84f107f7286636c994f3a5a", "size": 12208},
+    {"path": "proxy-sub/clash-live-provider.yaml", "sha": "716f692e3b2ae15077e95e5b3f8a5073ee52a54f", "size": 5301},
+    {"path": "proxy-sub/clash-live.yaml", "sha": "716f692e3b2ae15077e95e5b3f8a5073ee52a54f", "size": 5301},
+    {"path": "proxy-sub/clash.yaml", "sha": "7f79d926cc7489e77e42eb3f437d0bb58c50fb7b", "size": 574836},
+    {"path": "proxy-sub/live-provider.yaml", "sha": "6f23056d5a931ec03996d7ea96a1875b98ec3f8d", "size": 16921},
+    {"path": "proxy-sub/live.txt", "sha": "67d267bde8df93780e9064bc3b76fc92c1c9c155", "size": 13188},
+    {"path": "proxy-sub/meta.json", "sha": "95eef91f7fea3029b16c90665df26ad4c73198ba", "size": 26508},
+    {"path": "proxy-sub/nodes.txt", "sha": "fbac87e4cacd663a6214cab270c463aa1af94f79", "size": 15334},
+    {"path": "sub/probe.yaml", "sha": "c791105eac7cbcbfb0131b1a49f9ed5c60065452", "size": 12}
+  ],
+  "proposed_source_paths_do_not_collide_at_observed_head": true,
+  "deployment_note": "Recheck remote HEAD and paths before merging; preserve existing proxy-sub/ and sub/ contents. No push performed."
+}

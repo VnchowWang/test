@@ -1,0 +1,13 @@
+.private/
+.deps/
+.pip-cache/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+# Credential-bearing generated content must never enter this public repository.
+9929-proxies.yaml
+9929-flclash.yaml
+subscription-links.json

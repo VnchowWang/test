@@ -1,0 +1,2233 @@
+{
+  "started_at": "2026-11-05T14:33:36.995104+00:00",
+  "updated_at": "2026-11-05T14:36:48.263841+00:00",
+  "method": "27 saved nodes pinned to previously traced IPv4 entries, direct /32 WLAN routes; isolated Mihomo; 3 rounds x 2 HTTPS endpoints; 2 x 1MiB Cloudflare downloads per node, concurrency 2",
+  "nodes": [
+    {
+      "id": "quality14",
+      "airport": "掌中世界(1)",
+      "node": "HK02🇭🇰影视娱乐",
+      "entry_ip": "217.217.88.58",
+      "server": "hook-1.monohotel.world",
+      "port": "35552",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 269
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 467
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 254
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 281
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 297
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 492
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.305461,
+          "time_starttransfer": 0.341715,
+          "speed_download": 803224,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 6.426,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 1.533208,
+          "time_starttransfer": 0.32996,
+          "speed_download": 683911,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 5.471,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "216.236.38.100",
+        "colo": "HKG",
+        "loc": "HK"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 289.0,
+      "https_p95_ms": 492,
+      "download_success": 2,
+      "download_median_mbps": 5.95,
+      "tier": "优先试用"
+    },
+    {
+      "id": "quality23",
+      "airport": "掌中世界(1)",
+      "node": "SG01🇸🇬AI优化",
+      "entry_ip": "217.217.88.58",
+      "server": "studio.monohotel.world",
+      "port": "39443",
+      "protocol": "vless",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 476
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 516
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 467
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 516
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 513
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 631
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.418865,
+          "time_starttransfer": 0.589364,
+          "speed_download": 739026,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 5.912,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 1.448378,
+          "time_starttransfer": 0.798585,
+          "speed_download": 723967,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 5.792,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "163.128.99.34",
+        "colo": "SIN",
+        "loc": "SG"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 514.5,
+      "https_p95_ms": 631,
+      "download_success": 2,
+      "download_median_mbps": 5.85,
+      "tier": "优先试用"
+    },
+    {
+      "id": "quality16",
+      "airport": "掌中世界(1)",
+      "node": "台湾01丨AI专线",
+      "entry_ip": "217.217.88.58",
+      "server": "case.monohotel.world",
+      "port": "31341",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 428
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 728
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 498
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 509
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 762
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 547
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.218131,
+          "time_starttransfer": 0.498366,
+          "speed_download": 860809,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 6.886,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 1.247764,
+          "time_starttransfer": 0.556307,
+          "speed_download": 840366,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 6.723,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "111.252.184.120",
+        "colo": "TPE",
+        "loc": "TW"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 528.0,
+      "https_p95_ms": 762,
+      "download_success": 2,
+      "download_median_mbps": 6.8,
+      "tier": "优先试用"
+    },
+    {
+      "id": "quality22",
+      "airport": "掌中世界(1)",
+      "node": "HK06🇭🇰办公日常",
+      "entry_ip": "217.217.88.34",
+      "server": "auth-center.zzdy25.com",
+      "port": "37328",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 320
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 421
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 339
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 302
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 552
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 308
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 2.893941,
+          "time_starttransfer": 1.403984,
+          "speed_download": 362335,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.899,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.606861,
+          "time_starttransfer": 0.539097,
+          "speed_download": 290717,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.326,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "216.236.38.101",
+        "colo": "HKG",
+        "loc": "HK"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 329.5,
+      "https_p95_ms": 552,
+      "download_success": 2,
+      "download_median_mbps": 2.61,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality15",
+      "airport": "掌中世界(1)",
+      "node": "HK04🇭🇰影视娱乐",
+      "entry_ip": "217.217.88.58",
+      "server": "hook-1.monohotel.world",
+      "port": "35553",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 532
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1310
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 238
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 299
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 295
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1686
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 0,
+          "time_total": 5.015937,
+          "time_starttransfer": 5.015935,
+          "speed_download": 0,
+          "size_download": 0,
+          "exit_code": 28,
+          "ok": false,
+          "mbps": 0.0,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 0.902766,
+          "time_starttransfer": 0.359787,
+          "speed_download": 1161517,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 9.292,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "216.236.38.100",
+        "colo": "HKG",
+        "loc": "HK"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 415.5,
+      "https_p95_ms": 1686,
+      "download_success": 1,
+      "download_median_mbps": 9.29,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality24",
+      "airport": "掌中世界(1)",
+      "node": "SG02🇸🇬AI优化",
+      "entry_ip": "217.217.88.58",
+      "server": "studio.monohotel.world",
+      "port": "39454",
+      "protocol": "vless",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 493
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 527
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 750
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1995
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 581
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1099
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.295958,
+          "time_starttransfer": 0.646956,
+          "speed_download": 809114,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 6.473,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 4.835885,
+          "time_starttransfer": 0.965789,
+          "speed_download": 216832,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.735,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "163.128.99.34",
+        "colo": "SIN",
+        "loc": "SG"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 665.5,
+      "https_p95_ms": 1995,
+      "download_success": 2,
+      "download_median_mbps": 4.1,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality2",
+      "airport": "Muacloud网络加速.yaml",
+      "node": "高倍率 台湾 ｜穿透 04 [10x]",
+      "entry_ip": "217.217.88.34",
+      "server": "ee.4iox.net",
+      "port": "20122",
+      "protocol": "anytls",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1320
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 505
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 563
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 847
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 879
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 575
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 7.146794,
+          "time_starttransfer": 2.162646,
+          "speed_download": 146719,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.174,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.135013,
+          "time_starttransfer": 0.558711,
+          "speed_download": 334472,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.676,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "136.0.54.198",
+        "colo": "HKG",
+        "loc": "HK"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 711.0,
+      "https_p95_ms": 1320,
+      "download_success": 2,
+      "download_median_mbps": 1.93,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality21",
+      "airport": "掌中世界(1)",
+      "node": "JP04🇯🇵AI优化",
+      "entry_ip": "217.217.88.58",
+      "server": "jp001.monohotel.world",
+      "port": "35214",
+      "protocol": "vless",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 756
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 779
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 802
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 536
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2056
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 687
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.216113,
+          "time_starttransfer": 0.639448,
+          "speed_download": 862237,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 6.898,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 1.272221,
+          "time_starttransfer": 0.583009,
+          "speed_download": 824210,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 6.594,
+          "round": 2
+        }
+      ],
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 767.5,
+      "https_p95_ms": 2056,
+      "download_success": 2,
+      "download_median_mbps": 6.75,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality1",
+      "airport": "Muacloud网络加速.yaml",
+      "node": "高倍率 台湾 ｜穿透 03 [9x]",
+      "entry_ip": "217.217.88.34",
+      "server": "dd.4iox.net",
+      "port": "20121",
+      "protocol": "anytls",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2069
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1119
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 281
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 486
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 266
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2671
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 7.683032,
+          "time_starttransfer": 1.06895,
+          "speed_download": 136479,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.092,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 5.811025,
+          "time_starttransfer": 0.804738,
+          "speed_download": 180446,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.444,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "136.0.54.198",
+        "colo": "HKG",
+        "loc": "HK"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 802.5,
+      "https_p95_ms": 2671,
+      "download_success": 2,
+      "download_median_mbps": 1.27,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality19",
+      "airport": "掌中世界(1)",
+      "node": "SG02🇸🇬AI专线",
+      "entry_ip": "217.217.88.58",
+      "server": "meet.monohotel.world",
+      "port": "35346",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 912
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 909
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 918
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1108
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 881
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 893
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 4.086859,
+          "time_starttransfer": 1.250003,
+          "speed_download": 256572,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.053,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.196046,
+          "time_starttransfer": 1.075515,
+          "speed_download": 328085,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.625,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "137.220.151.169",
+        "colo": "SIN",
+        "loc": "SG"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 910.5,
+      "https_p95_ms": 1108,
+      "download_success": 2,
+      "download_median_mbps": 2.34,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality0",
+      "airport": "Muacloud网络加速.yaml",
+      "node": "高倍率 日本 ｜穿透 02 [10x]",
+      "entry_ip": "217.217.88.34",
+      "server": "ee.4iox.net",
+      "port": "43525",
+      "protocol": "anytls",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 3323
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1242
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 674
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 471
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 324
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1199
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 6.484402,
+          "time_starttransfer": 0.943248,
+          "speed_download": 161707,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.294,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 7.213004,
+          "time_starttransfer": 1.617245,
+          "speed_download": 145373,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.163,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "45.192.200.188",
+        "colo": "NRT",
+        "loc": "JP"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 936.5,
+      "https_p95_ms": 3323,
+      "download_success": 2,
+      "download_median_mbps": 1.23,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality18",
+      "airport": "掌中世界(1)",
+      "node": "SG01🇸🇬AI专线",
+      "entry_ip": "217.217.88.58",
+      "server": "meet.monohotel.world",
+      "port": "35345",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1814
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 883
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1879
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 928
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 991
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1391
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 4.03602,
+          "time_starttransfer": 1.211568,
+          "speed_download": 259804,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.078,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.163491,
+          "time_starttransfer": 0.931338,
+          "speed_download": 331461,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.652,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "137.220.151.169",
+        "colo": "SIN",
+        "loc": "SG"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 1191.0,
+      "https_p95_ms": 1879,
+      "download_success": 2,
+      "download_median_mbps": 2.37,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality7",
+      "airport": "Speedy",
+      "node": "Standard 1.5x | 英国 | C",
+      "entry_ip": "217.217.88.34",
+      "server": "uk.speedybd.com",
+      "port": "20091",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1329
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 3837
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 4907
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1336
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1373
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1208
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 6.571538,
+          "time_starttransfer": 4.08555,
+          "speed_download": 159563,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.277,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 6.597925,
+          "time_starttransfer": 1.645967,
+          "speed_download": 158925,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.271,
+          "round": 2
+        }
+      ],
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 1354.5,
+      "https_p95_ms": 4907,
+      "download_success": 2,
+      "download_median_mbps": 1.27,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality4",
+      "airport": "Speedy",
+      "node": "Standard 1.5x | 美国 | C",
+      "entry_ip": "217.217.88.34",
+      "server": "usa.speedybd.com",
+      "port": "20064",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1113
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 4113
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1417
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 997
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1334
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 3147
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 4.581504,
+          "time_starttransfer": 2.130832,
+          "speed_download": 228871,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.831,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 4.631471,
+          "time_starttransfer": 1.43981,
+          "speed_download": 226402,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.811,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.16.27.170",
+        "colo": "SJC",
+        "loc": "US"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 1375.5,
+      "https_p95_ms": 4113,
+      "download_success": 2,
+      "download_median_mbps": 1.82,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality8",
+      "airport": "Speedy",
+      "node": "Basic | 美国 | A",
+      "entry_ip": "217.217.88.34",
+      "server": "usa.speedybd.com",
+      "port": "20065",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1000
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2119
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1197
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1250
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 2252
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1735
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 4.036469,
+          "time_starttransfer": 2.414551,
+          "speed_download": 259775,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.078,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 4.722237,
+          "time_starttransfer": 3.102171,
+          "speed_download": 222050,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.776,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.16.27.170",
+        "colo": "SJC",
+        "loc": "US"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 1492.5,
+      "https_p95_ms": 2252,
+      "download_success": 2,
+      "download_median_mbps": 1.93,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality10",
+      "airport": "Speedy",
+      "node": "Basic | 美国 | C",
+      "entry_ip": "217.217.88.34",
+      "server": "usa.speedybd.com",
+      "port": "20065",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 2355
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1054
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 2164
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1964
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1670
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2498
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 4.123341,
+          "time_starttransfer": 1.613894,
+          "speed_download": 254302,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.034,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.091418,
+          "time_starttransfer": 1.18263,
+          "speed_download": 339189,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.714,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.16.27.170",
+        "colo": "SJC",
+        "loc": "US"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 2064.0,
+      "https_p95_ms": 2498,
+      "download_success": 2,
+      "download_median_mbps": 2.37,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality6",
+      "airport": "Speedy",
+      "node": "Standard 1.5x | 英国 | B",
+      "entry_ip": "217.217.88.34",
+      "server": "uk.speedybd.com",
+      "port": "20091",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 4021
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1692
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2516
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1450
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1489
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 2932
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 5.398967,
+          "time_starttransfer": 2.157805,
+          "speed_download": 194218,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.554,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 4.148123,
+          "time_starttransfer": 1.314207,
+          "speed_download": 252783,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.022,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "194.147.16.190",
+        "colo": "BRU",
+        "loc": "GB"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 2104.0,
+      "https_p95_ms": 4021,
+      "download_success": 2,
+      "download_median_mbps": 1.79,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality3",
+      "airport": "Speedy",
+      "node": "Standard 1.5x | 美国 | B",
+      "entry_ip": "217.217.88.34",
+      "server": "usa.speedybd.com",
+      "port": "20064",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1978
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 3326
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 950
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 2458
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 2611
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1965
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 5.044479,
+          "time_starttransfer": 2.045086,
+          "speed_download": 207866,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.663,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 5.258859,
+          "time_starttransfer": 2.140738,
+          "speed_download": 199392,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.595,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.16.27.170",
+        "colo": "SJC",
+        "loc": "US"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 2218.0,
+      "https_p95_ms": 3326,
+      "download_success": 2,
+      "download_median_mbps": 1.63,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality13",
+      "airport": "掌中世界(1)",
+      "node": "HK01🇭🇰影视娱乐",
+      "entry_ip": "217.217.88.58",
+      "server": "hook-1.monohotel.world",
+      "port": "35550",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 244
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 254
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 265
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 361
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 725
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 0.841683,
+          "time_starttransfer": 0.334631,
+          "speed_download": 1245813,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 9.967,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 0.743577,
+          "time_starttransfer": 0.266737,
+          "speed_download": 1410183,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 11.281,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "216.236.38.100",
+        "colo": "HKG",
+        "loc": "HK"
+      },
+      "https_success": 5,
+      "https_attempts": 6,
+      "https_median_ms": 265,
+      "https_p95_ms": 725,
+      "download_success": 2,
+      "download_median_mbps": 10.62,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality17",
+      "airport": "掌中世界(1)",
+      "node": "台湾02丨AI专线",
+      "entry_ip": "217.217.88.58",
+      "server": "case.monohotel.world",
+      "port": "31342",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 560
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 435
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 492
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 517
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 4932
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.117541,
+          "time_starttransfer": 0.488798,
+          "speed_download": 938291,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 7.506,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 1.053549,
+          "time_starttransfer": 0.468032,
+          "speed_download": 995283,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 7.962,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "111.252.184.120",
+        "colo": "TPE",
+        "loc": "TW"
+      },
+      "https_success": 5,
+      "https_attempts": 6,
+      "https_median_ms": 517,
+      "https_p95_ms": 4932,
+      "download_success": 2,
+      "download_median_mbps": 7.73,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality20",
+      "airport": "掌中世界(1)",
+      "node": "JP03🇯🇵AI优化",
+      "entry_ip": "217.217.88.58",
+      "server": "jp001.monohotel.world",
+      "port": "35211",
+      "protocol": "vless",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 686
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 761
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 587
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 547
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 550
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 1.159728,
+          "time_starttransfer": 0.540134,
+          "speed_download": 904159,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 7.233,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 1.130842,
+          "time_starttransfer": 0.598135,
+          "speed_download": 927254,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 7.418,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "103.137.215.30",
+        "colo": "NRT",
+        "loc": "JP"
+      },
+      "https_success": 5,
+      "https_attempts": 6,
+      "https_median_ms": 587,
+      "https_p95_ms": 761,
+      "download_success": 2,
+      "download_median_mbps": 7.33,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality9",
+      "airport": "Speedy",
+      "node": "Basic | 美国 | B",
+      "entry_ip": "217.217.88.34",
+      "server": "usa.speedybd.com",
+      "port": "20065",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 3651
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1083
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1013
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1427
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1108
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 3.035421,
+          "time_starttransfer": 1.222046,
+          "speed_download": 345446,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.764,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.355882,
+          "time_starttransfer": 1.137412,
+          "speed_download": 312459,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.5,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.16.27.170",
+        "colo": "SJC",
+        "loc": "US"
+      },
+      "https_success": 5,
+      "https_attempts": 6,
+      "https_median_ms": 1108,
+      "https_p95_ms": 3651,
+      "download_success": 2,
+      "download_median_mbps": 2.63,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality5",
+      "airport": "Speedy",
+      "node": "Standard 1.5x | 英国 | A",
+      "entry_ip": "217.217.88.34",
+      "server": "uk.speedybd.com",
+      "port": "20091",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 2200
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1854
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 1557
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 3451
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 1134
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 3.619596,
+          "time_starttransfer": 1.79627,
+          "speed_download": 289694,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.318,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 4.537698,
+          "time_starttransfer": 1.963305,
+          "speed_download": 231081,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.849,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "194.147.16.190",
+        "colo": "BRU",
+        "loc": "GB"
+      },
+      "https_success": 5,
+      "https_attempts": 6,
+      "https_median_ms": 1854,
+      "https_p95_ms": 3451,
+      "download_success": 2,
+      "download_median_mbps": 2.08,
+      "tier": "可用备选"
+    },
+    {
+      "id": "quality12",
+      "airport": "星河 583",
+      "node": "[🇺🇸] 美国03 奈飞|迪士尼+ x1",
+      "entry_ip": "154.40.38.145",
+      "server": "t11.583181.xyz",
+      "port": "8136",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 826
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 748
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 3930
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 746
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 828
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 805
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 0,
+          "time_total": 5.000803,
+          "time_starttransfer": 5.000802,
+          "speed_download": 0,
+          "size_download": 0,
+          "exit_code": 28,
+          "ok": false,
+          "mbps": 0.0,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 11.999647,
+          "time_starttransfer": 5.635464,
+          "speed_download": 49770,
+          "size_download": 597220,
+          "exit_code": 28,
+          "ok": false,
+          "mbps": 0.398,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.40.38.145",
+        "colo": "LAX",
+        "loc": "US"
+      },
+      "https_success": 6,
+      "https_attempts": 6,
+      "https_median_ms": 815.5,
+      "https_p95_ms": 3930,
+      "download_success": 0,
+      "download_median_mbps": null,
+      "tier": "不稳定或较慢"
+    },
+    {
+      "id": "quality11",
+      "airport": "星河 583",
+      "node": "[🇺🇸] 美国02 奈飞|迪士尼+ x1",
+      "entry_ip": "154.40.38.145",
+      "server": "t4.583181.xyz",
+      "port": "1820",
+      "protocol": "trojan",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 857
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 766
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "delay_ms": 830
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "delay_ms": 4718
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 12.005575,
+          "time_starttransfer": 3.074046,
+          "speed_download": 23729,
+          "size_download": 284878,
+          "exit_code": 28,
+          "ok": false,
+          "mbps": 0.19,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 12.005783,
+          "time_starttransfer": 4.156261,
+          "speed_download": 15804,
+          "size_download": 189748,
+          "exit_code": 28,
+          "ok": false,
+          "mbps": 0.126,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "154.40.38.145",
+        "colo": "LAX",
+        "loc": "US"
+      },
+      "https_success": 4,
+      "https_attempts": 6,
+      "https_median_ms": 843.5,
+      "https_p95_ms": 4718,
+      "download_success": 0,
+      "download_median_mbps": null,
+      "tier": "不稳定或较慢"
+    },
+    {
+      "id": "quality25",
+      "airport": "掌中世界(1)",
+      "node": "美国02丨Netflix",
+      "entry_ip": "217.217.88.58",
+      "server": "use.vaelor.world",
+      "port": "36112",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 2.851164,
+          "time_starttransfer": 0.917378,
+          "speed_download": 367771,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.942,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 3.282847,
+          "time_starttransfer": 0.855171,
+          "speed_download": 319410,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 2.555,
+          "round": 2
+        }
+      ],
+      "https_success": 0,
+      "https_attempts": 6,
+      "https_median_ms": null,
+      "https_p95_ms": null,
+      "download_success": 2,
+      "download_median_mbps": 2.75,
+      "tier": "不稳定或较慢"
+    },
+    {
+      "id": "quality26",
+      "airport": "掌中世界(1)",
+      "node": "美国03丨ChatGPT",
+      "entry_ip": "217.217.88.58",
+      "server": "use.vaelor.world",
+      "port": "36113",
+      "protocol": "ss",
+      "samples": [
+        {
+          "round": 1,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 1,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 2,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 2,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 3,
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": false,
+          "error": "HTTPError"
+        },
+        {
+          "round": 3,
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": false,
+          "error": "HTTPError"
+        }
+      ],
+      "downloads": [
+        {
+          "http_code": 200,
+          "time_total": 2.70084,
+          "time_starttransfer": 0.885281,
+          "speed_download": 388241,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 3.106,
+          "round": 1
+        },
+        {
+          "http_code": 200,
+          "time_total": 4.470629,
+          "time_starttransfer": 0.852868,
+          "speed_download": 234547,
+          "size_download": 1048576,
+          "exit_code": 0,
+          "ok": true,
+          "mbps": 1.876,
+          "round": 2
+        }
+      ],
+      "egress": {
+        "ip": "38.6.158.228",
+        "colo": "LAX",
+        "loc": "US"
+      },
+      "https_success": 0,
+      "https_attempts": 6,
+      "https_median_ms": null,
+      "https_p95_ms": null,
+      "download_success": 2,
+      "download_median_mbps": 2.49,
+      "tier": "不稳定或较慢"
+    }
+  ]
+}
